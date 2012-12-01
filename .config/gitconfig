@@ -8,7 +8,13 @@
 	editor = vim
 	excludesfile = /Users/neuralsandwich/.gitignore
 [color]
-	ui = true
+    diff = auto
+    status = auto
+    branch = auto
+[color "status"]
+    changed = yellow
+    added = green
+    untracked = red
 [alias]
   co = checkout
   ci = commit
