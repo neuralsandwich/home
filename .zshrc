@@ -43,3 +43,59 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/opt/local/bin
+
+## Customizations ##
+# imported .bash_aliases
+alias 'dus=du -sckx * | sort -nr'
+alias 'ttop=top -ocpu -R -F -s 2 -n30'
+alias lh='ls -a | egrep "^\."'
+# -------------------------------------------------------------------
+# make some commands (potentially) less destructive
+# -------------------------------------------------------------------
+alias 'rm=rm -i'
+
+# -------------------------------------------------------------------
+# Git
+# -------------------------------------------------------------------
+alias ga='git add'
+alias gap='git add -p'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+
+# leverage an alias from the ~/.gitconfig
+alias gh='git hist'
+
+# -------------------------------------------------------------------
+# Functions ported directly from .bashrc
+# -------------------------------------------------------------------
+# Only activate functions if they work on the platform
+
+if [ `uname` = "Darwin" ]; then
+  # turn hidden files on/off in Finder
+  function hiddenOn() { defaults write com.apple.Finder AppleShowAllFiles YES ; }
+  function hiddenOff() { defaults write com.apple.Finder AppleShowAllFiles NO ; }
+
+  # view man pages in Preview
+  function pman() { ps=`mktemp -t manpageXXXX`.ps ; man -t $@ > "$ps" ; open "$ps" ; }
+fi
+
+# myIP address
+function myip() {
+  ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
+  ifconfig en0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig en0 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en0 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
+  ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
+}
