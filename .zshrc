@@ -36,7 +36,7 @@ export UPDATE_ZSH_DAYS=14
 if [ `uname` = "Darwin" ]; then
   plugins=(git osx sublime battery macports terminalapp)
 elif [ `uname` = "Linux" ]; then
-  plugins=(git)
+  plugins=(git battery)
 fi
 
 source $ZSH/oh-my-zsh.sh
