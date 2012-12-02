@@ -8,6 +8,7 @@
 	editor = vim
 	excludesfile = /Users/neuralsandwich/.gitignore
 [color]
+    ui = true
     diff = auto
     status = auto
     branch = auto
