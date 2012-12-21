@@ -86,14 +86,14 @@ elif [ `uname -n` = "verloc.neuralsandwich.com" ]; then
   read one five fifteen rest < /proc/loadavg
   echo "$(tput setaf 1)
           _sudZUZ#Z#XZo=_          $(tput setaf 2)`date +"%A, %e %B %Y, %r"`$(tput setaf 1)
-       _jmZZ2\!\!~---~\!\!X##wx        `uname -srmo`$(tput setaf 1)
+       _jmZZ2\!\!~---~\!\!X##wx        $(tput setaf 2)`uname -srmo`$(tput setaf 1)
     .<wdP~~            -\!YZL,
-   .mX2\'       _xaaa__     XZ[.   Uptime.............: ${UPTIME}
-   oZ[      _jdXY\!~?S#wa   ]Xb;    Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total)
-  _#e\'     .]X2(     ~Xw|  )XXc   Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
- .2#;      )3k;     _s\!~   jXf\`    Running Processes..: `ps ax | wc -l | tr -d " "`
-  1Z>      -]Xb/    ~    __#2(     IP Addresses.......: `/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1` and `wget -q -O - http://icanhazip.com/ | tail`
-  -Zo;       +\!4ZwerfgnZZXY\'      Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|EDINBURGH|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'` [Edinburgh]
+   .mX2\'       _xaaa__     XZ[.   $(tput setaf 2)Uptime.............: ${UPTIME}$(tput setaf 1)
+   oZ[      _jdXY\!~?S#wa   ]Xb;    $(tput setaf 2)Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total)$(tput setaf 1)
+  _#e\'     .]X2(     ~Xw|  )XXc   $(tput setaf 2)Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)$(tput setaf 1)
+ .2#;      )3k;     _s\!~   jXf\`    $(tput setaf 2)Running Processes..: `ps ax | wc -l | tr -d " "`$(tput setaf 1)
+  1Z>      -]Xb/    ~    __#2(     $(tput setaf 2)IP Addresses.......: `/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1` and `wget -q -O - http://icanhazip.com/ | tail`$(tput setaf 1)
+  -Zo;       +\!4ZwerfgnZZXY\'      $(tput setaf 2)Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|EDINBURGH|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'` [Edinburgh]$(tput setaf 1)
    *#[,        ~-?\!\!\!\!\!\!-~
     XUb;.
      )YXL,,
