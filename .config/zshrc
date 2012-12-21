@@ -91,7 +91,7 @@ elif [ `uname -n` = "verloc.neuralsandwich.com" ]; then
   $(tput setaf 1)    .<wdP~~            -!YZL,
   $(tput setaf 1)   .mX2\'       _xaaa__     XZ[.  $(tput setaf 2)Uptime            : ${UPTIME}
   $(tput setaf 1)   oZ[      _jdXY!~?S#wa   ]Xb;   $(tput setaf 2)Memory Free/Total : `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB
-  $(tput setaf 1)  _#e\'     .]X2(     ~Xw|  )XXc  $(tput setaf 2)Load Averages     : ${one}, ${five}, ${fifteen} (1, 5, 15 min)
+  $(tput setaf 1)  _#e\'     .]X2(     ~Xw|  )XXc  $(tput setaf 2)Load Averages     : ${one}, ${five}, ${fifteen}
   $(tput setaf 1) .2~\'      ]x[.       xY|  ]oZ(  $(tput setaf 2)Processes         : `ps ax | wc -l | tr -d ' '`
   $(tput setaf 1) .2#;      )3k;     _s!~   jXf\`   $(tput setaf 2)Local IP          : `/sbin/ifconfig eth0 | /bin/grep 'inet addr' | /usr/bin/cut -d ':' -f 2 | /usr/bin/cut -d ' ' -f 1`
   $(tput setaf 1)  1Z>      -]Xb/    ~    __#2(    $(tput setaf 2)External IP       : `wget -q -O - http://icanhazip.com/ | tail`
