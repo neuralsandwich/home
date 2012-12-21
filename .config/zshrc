@@ -85,16 +85,15 @@ elif [ `uname -n` = "verloc.neuralsandwich.com" ]; then
   # get the load averages
   read one five fifteen rest < /proc/loadavg
   echo "$(tput setaf 2)
-                                  Uptime.............: ${UPTIME}
-          _sudZUZ#Z#XZo=_         Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total)
-       _jmZZ2!!~---~!!X##wx       Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
-    .<wdP~~            -!YZL,     Running Processes..: `ps ax | wc -l | tr -d " "`
-   .mX2'       _xaaa__     XZ[.   IP Addresses.......: `/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1` and `wget -q -O - http://icanhazip.com/ | tail`
-   oZ[      _jdXY!~?S#wa   ]Xb;   Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|EDINBURGH|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'` [Edinburgh]
-  _#e'     .]X2(     ~Xw|  )XXc
- .2Z`      ]X[.       xY|  ]oZ(
- .2#;      )3k;     _s!~   jXf`
-  1Z>      -]Xb/    ~    __#2(
+          _sudZUZ#Z#XZo=_         `date +"%A, %e %B %Y, %r"`
+       _jmZZ2!!~---~!!X##wx       `uname -srmo`$(tput setaf 1)
+    .<wdP~~            -!YZL,
+   .mX2'       _xaaa__     XZ[.   Uptime.............: ${UPTIME}
+   oZ[      _jdXY!~?S#wa   ]Xb;   Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total)
+  _#e'     .]X2(     ~Xw|  )XXc   Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
+ .2Z`      ]X[.       xY|  ]oZ(   Running Processes..: `ps ax | wc -l | tr -d " "`
+ .2#;      )3k;     _s!~   jXf`   IP Addresses.......: `/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1` and `wget -q -O - http://icanhazip.com/ | tail`
+  1Z>      -]Xb/    ~    __#2(    Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|EDINBURGH|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'` [Edinburgh]
   -Zo;       +!4ZwerfgnZZXY'
    *#[,        ~-?!!!!!!-~
     XUb;.
