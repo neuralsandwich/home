@@ -157,3 +157,12 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 
 "------------------------------------------------------------
+" Disable Arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+"-------------------------------------------------------------
+" Enable Pathogen
+execute pathogen#infect()
