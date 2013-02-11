@@ -15,13 +15,9 @@ if [ -f ~/.Xresources ]; then
   xrdb -merge ~/.Xresources
 fi
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# exec wmaker
-# exec icewm
-# exec blackbox
-# exec fluxbox
-# exec openbox-session
-# ...or the Window Manager of your choice
+while true; do
+  xsetroot -name  xsetroot -name "Vol. $(awk '/dB/ { gsub(/[\[\]]/,""); print $5}' <(amixer get Master)) \
+  | $( date +"%F %R" )"
+sleep 10s
+done &
 exec dwm
