@@ -17,7 +17,7 @@ fi
 
 while true; do
   xsetroot -name  xsetroot -name "Vol. $(awk '/dB/ { gsub(/[\[\]]/,""); print $5}' <(amixer get Master)) \
-  | $( date +"%F %R" )"
-sleep 10s
+  | $( date +"%F %T" )"
+sleep 1
 done &
 exec dwm
