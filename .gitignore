@@ -1,2 +1,11 @@
-Kitware/ Trolltech.conf dconf enchant/ gedit/ google-chrome/ htop/ libimobiledevice libreoffice user-dirs.dirs user-dirs.locale
-google-chrome/
+Kitware
+Trolltech.conf
+dconf
+enchant
+gedit
+htop/ 
+libimobiledevice 
+libreoffice 
+user-dirs.dirs
+user-dirs.locale
+google-chrome
