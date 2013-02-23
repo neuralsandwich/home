@@ -75,7 +75,7 @@ if [ `uname -n` = "raspberrypi" ]; then
    '~ .~~~. ~'    Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|EDINBURGH|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'` [Edinburgh]
        '~'
 $(tput sgr0)"
-elif [ `cat /etc/issue | grep -o -P ^Debian` = "Debian" ]; then
+elif [[ `cat /etc/issue | grep -o -P ^Debian` = "Debian" ]]; then
   let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
   let secs=$((${upSeconds}%60))
   let mins=$((${upSeconds}/60%60))
