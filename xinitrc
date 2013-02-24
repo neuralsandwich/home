@@ -16,8 +16,7 @@ if [ -f ~/.Xresources ]; then
 fi
 
 while true; do
-  xsetroot -name  xsetroot -name "Vol. $(awk '/dB/ { gsub(/[\[\]]/,""); print $5}' <(amixer get Master)) \
-  | $( date +"%F %T" )"
+  xsetroot -name "$( date +"%F %T" )"
 sleep 1
 done &
 exec dwm
