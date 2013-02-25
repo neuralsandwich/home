@@ -37,23 +37,22 @@ elif [ `uname` = "Linux" ]; then
   plugins=(git battery)
 fi
 
-HISTFILE=~/.history
-HISTSIZE=10000
-SAVEHIST=10000
-
-# Variables
-export EDITOR="vim"
-export PAGER="vimpager"
-export VISUAL="$EDITOR"
-export PAGER="less -i"
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/opt/local/bin
 
 ## Customizations ##
 
+# http://stackoverflow.com/a/844299
+expand-or-complete-with-dots() {
+    echo -n "\e[31m...\e[0m"
+      zle expand-or-complete
+        zle redisplay
+      }
+      zle -N expand-or-complete-with-dots
+      bindkey "^I" expand-or-complete-with-dots
+
 ## Welcome Message ##
+
 if [ `uname -n` = "raspberrypi" ]; then
   let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
   let secs=$((${upSeconds}%60))

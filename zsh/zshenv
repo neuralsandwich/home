@@ -1,0 +1,88 @@
+# Enviroment
+# Path
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/op/local/bin
+
+# Variables
+export EDITOR="vim"
+export PAGER="vimpager"
+export VISUAL="$EDITOR"
+
+# https://github.com/cyphactor/dotzsh/blob/master/zshenv
+# Colours
+autoload -U colors
+colors
+setopt prompt_subst
+# Show completion on first TAB
+setopt menucomplete
+
+# Load completions for Ruby, Git, etc.
+autoload compinit
+compinit
+
+
+# Zsh settings for history
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTSIZE=25000
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+
+# Aliases
+
+# -------------------------------------------------------------------
+# Functions ported directly from .bashrc
+# -------------------------------------------------------------------
+# Only activate functions if this is a mac
+if [[ `uname` = "Darwin" ]] ;  then
+  # Turn hidden files on/off in Finder
+  function hiddenOn() { defaults write com.apple.Finder AppleShowAllFiles YES ; }
+  function hiddenOf() { defaults write com.apple.Finder AppleShowAllFiles NO  ;}
+  # view man pages in Preview
+  function pman() { ps=`mktemp -t manpageXXXX`.ps ; man -t $@ > "$ps" ; opem "$ps" ; }
+fi
+
+# Easy extract
+function extract() {
+  if [[ -f $1 ]] ; then
+    case $1 in
+      *.tar.bz2)  tar xvjf $1   ;;
+      *.tar.gz)   tar xzvf $1   ;;
+      *.bz2)      bunzip2 $1    ;;
+      *.rar)      rar x $1      ;;
+      *.gx)       gunzip $1     ;;
+      *.tar)      tar xvf $1    ;;
+      *.tbz2)     tar xvjf $1   ;;
+      *.tgz)      tar xzvf $1   ;;
+      *.zip)      unzip $1      ;;
+      *.Z)        uncompress $1 ;;
+      *.7z)       7z x $1       ;;
+      *)          echo "Don't know how to extract '$1'..." ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
+}
+
+# Create an archive from given directory
+mktar() { tar cvf  "${1%%/}.tar"     "${1%%/}/"; }
+mktgz() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+mktbz() { tar cvjf "${1%%/}.tar.bz2" "${1%%/}/"; }
+
+## Useful command aliases
+alias df='df -h'
+alias du='du -h -c'
+alias ls='ls -G'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir=' mkdir -p -v'
+alias l='ls -GF'
+alias lr='ls -lR'
+alias lk='ls -lSr'
+alias la='ls -Al'
+alias lm='ls -Al | less'
+alias lt='ls -ltr'
+alias ll='ls -l'
+alias lsd='ls -s | grep "^d"'
