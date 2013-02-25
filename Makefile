@@ -8,7 +8,7 @@ build:
 	ln -s ~/.config/vim ~/.vim
 	ln -s ~/.config/xinit ~/.xinit
 	ln -s ~/.config/Xresources ~/.Xresources
-
+	ln -s ~/.config/gitconfig ~/.gitconfig
 clean:
 	rm ~/.zshrc
 	rm ~/.zshenv
@@ -17,6 +17,7 @@ clean:
 	rm ~/.vim
 	rm ~/.xinit
 	rm ~/.Xresources
+	rm ~/.gitconfig
 
 test:
 	rm ~/.zshrc
