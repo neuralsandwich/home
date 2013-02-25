@@ -2,6 +2,9 @@
 # Path
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/op/local/bin
 
+# fpath
+fpath=(~/.config/zsh/func $fpath)
+
 # Variables
 export EDITOR="vim"
 export PAGER="vimpager"
