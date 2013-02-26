@@ -2,14 +2,21 @@
 # Path
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/op/local/bin
 
+# zsh localtion
+ZSH=".zsh"
+
 # fpath
-fpath=($HOME/.config/zsh/func "${fpath[@]}")
-fpath=($HOME/.config/zsh/func/battery/ "${fpath[@]}")
+fpath=($ZSH/func "${fpath[@]}")
+fpath=($ZSH/func/battery/ "${fpath[@]}")
 
-source "$HOME/.config/zsh/func/battery/battery.zsh"
+# Added my battery plugin from
+# oh-my-zsh
+# http://github.com/NeuralSandwich/oh-my-zsh.git
+source "$ZSH/func/battery/battery.zsh"
 
-
-autoload -U battery
+# Git prompt
+# https://github.com/olivierverdier/zsh-git-prompt
+source "$ZSH/git-prompt/zshrc.sh"
 
 # Variables
 export EDITOR="vim"
