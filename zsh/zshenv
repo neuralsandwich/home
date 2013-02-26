@@ -3,7 +3,13 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/op/local/bin
 
 # fpath
-fpath=(~/.config/zsh/func $fpath)
+fpath=($HOME/.config/zsh/func "${fpath[@]}")
+fpath=($HOME/.config/zsh/func/battery/ "${fpath[@]}")
+
+source "$HOME/.config/zsh/func/battery/battery.zsh"
+
+
+autoload -U battery
 
 # Variables
 export EDITOR="vim"
@@ -20,7 +26,7 @@ setopt menucomplete
 
 # Load completions for Ruby, Git, etc.
 autoload compinit
-compinit
+compinit -i
 
 
 # Zsh settings for history
