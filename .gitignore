@@ -17,3 +17,5 @@ software-center
 update-notifier
 libimobiledevice
 menus
+*.swp
+*.swo
