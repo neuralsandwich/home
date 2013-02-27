@@ -3,7 +3,7 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/op/local/bin
 
 # zsh localtion
-ZSH=".zsh"
+ZSH="$HOME/.zsh"
 
 # fpath
 fpath=($ZSH/func "${fpath[@]}")
@@ -14,7 +14,7 @@ fpath=($ZSH/func/battery/ "${fpath[@]}")
 # http://github.com/NeuralSandwich/oh-my-zsh.git
 source "$ZSH/func/battery/battery.zsh"
 
-# Git prompt
+# Git prompt function
 # https://github.com/olivierverdier/zsh-git-prompt
 source "$ZSH/git-prompt/zshrc.sh"
 
@@ -41,7 +41,7 @@ zstyle ':completion:*' menu select
 # Zsh settings for history
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
-export HISTFILE=~/.zsh_history
+export HISTFILE='$HOME.zsh_history'
 export SAVEHIST=10000
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -104,6 +104,7 @@ alias lm='ls -Al | less'
 alias lt='ls -ltr'
 alias ll='ls -l'
 alias lsd='ls -s | grep "^d"'
+alias reload='source $HOME/.zshenv && $HOME/.zshrc'
 
 # Git Aliases
 alias ga='git add'
