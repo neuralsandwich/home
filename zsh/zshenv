@@ -20,7 +20,7 @@ source "$ZSH/git-prompt/zshrc.sh"
 
 # Variables
 export EDITOR="vim"
-export PAGER="vimpager"
+export PAGER="less -i"
 export VISUAL="$EDITOR"
 
 # https://github.com/cyphactor/dotzsh/blob/master/zshenv
@@ -35,6 +35,8 @@ setopt menucomplete
 autoload compinit
 compinit -i
 
+# Pretty tab completion highlighting
+zstyle ':completion:*' menu select
 
 # Zsh settings for history
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
