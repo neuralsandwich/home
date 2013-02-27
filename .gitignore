@@ -19,3 +19,4 @@ libimobiledevice
 menus
 *.swp
 *.swo
+vim/.*
