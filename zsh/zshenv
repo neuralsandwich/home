@@ -41,7 +41,7 @@ zstyle ':completion:*' menu select
 # Zsh settings for history
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
-export HISTFILE="$HOME.zsh_history"
+export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=10000
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -104,7 +104,7 @@ alias lm='ls -Al | less'
 alias lt='ls -ltr'
 alias ll='ls -l'
 alias lsd='ls -s | grep "^d"'
-alias reload='source $HOME/.zshenv && $HOME/.zshrc'
+alias reload='source $HOME/.zshenv && source $HOME/.zshrc'
 
 # Git Aliases
 alias ga='git add'
