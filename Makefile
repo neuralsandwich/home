@@ -6,7 +6,7 @@ build:
 	ln -s ~/.config/zsh ~/.zsh
 	ln -s ~/.config/vimrc ~/.vimrc
 	ln -s ~/.config/vim ~/.vim
-	ln -s ~/.config/xinit ~/.xinit
+	ln -s ~/.config/xinitrc ~/.xinitrc
 	ln -s ~/.config/Xresources ~/.Xresources
 	ln -s ~/.config/gitconfig ~/.gitconfig
 clean:
@@ -15,7 +15,7 @@ clean:
 	rm ~/.zsh
 	rm ~/.vimrc
 	rm ~/.vim
-	rm ~/.xinit
+	rm ~/.xinitrc
 	rm ~/.Xresources
 	rm ~/.gitconfig
 
