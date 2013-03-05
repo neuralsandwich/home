@@ -9,6 +9,9 @@ build:
 	ln -s ~/.config/xinitrc ~/.xinitrc
 	ln -s ~/.config/Xresources ~/.Xresources
 	ln -s ~/.config/gitconfig ~/.gitconfig
+	ln -s ~/.config/bash_profile ~/.bash_profile
+	ln -s ~/.config/bashrc ~/.bashrc
+	ln -s ~/.config/bash_aliases ~/.bash_aliases
 clean:
 	rm ~/.zshrc
 	rm ~/.zshenv
@@ -18,6 +21,9 @@ clean:
 	rm ~/.xinitrc
 	rm ~/.Xresources
 	rm ~/.gitconfig
+	rm ~/.bashrc
+	rm ~/.bash_profile
+	rm ~/.bash_aliases
 
 test:
 	rm ~/.zshrc
