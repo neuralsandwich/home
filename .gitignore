@@ -21,3 +21,7 @@ menus
 *.swo
 vim/.*
 libreoffice
+MonoDevelop*
+gtk-*
+stetic*
+xbuild*
