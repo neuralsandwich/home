@@ -79,6 +79,11 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
 
+# http://wiki.pontus.cee.carleton.ca/index.php/Zsh#Using_VIM_mode.2C_but_still_having_CTRL-A_and_CTRL-E
+# Fix ctrl-a ctrl-e in vi mode
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
