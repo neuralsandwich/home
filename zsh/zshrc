@@ -2,7 +2,7 @@
 
 # Get hostname
 function box_name() {
-  hostname -a
+  hostname -s
 }
 
 if [[ -n "$SSH_CLIENT" ]] ; then ssh_client="[SSH]"
