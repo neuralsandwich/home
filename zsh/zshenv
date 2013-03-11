@@ -1,6 +1,6 @@
 # Enviroment
 # Path
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/op/local/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:
 
 # zsh localtion
 ZSH="$HOME/.zsh"
