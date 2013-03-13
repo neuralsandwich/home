@@ -84,6 +84,11 @@ key[PageDown]=${terminfo[knp]}
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 
+# http://stackoverflow.com/questions/4405200/can-i-make-control-u-behavior-be-the-same-for-zsh-as-it-is-for-bash
+# fixes cut and paste in terminal
+bindkey '^U' backward-kill-line
+bindkey '^Y' yank
+
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
