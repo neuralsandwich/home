@@ -1,1 +1,0 @@
-/Users/neuralsandwich/.config/bash_aliases
