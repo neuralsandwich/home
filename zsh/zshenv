@@ -18,6 +18,8 @@ source "$ZSH/func/battery/battery.zsh"
 # https://github.com/olivierverdier/zsh-git-prompt
 source "$ZSH/git-prompt/zshrc.sh"
 
+source "$HOME/.config/ssh-agent/ssh-agent.sh"
+
 # Variables
 export EDITOR="vim"
 export PAGER="less -i"
