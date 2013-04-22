@@ -10,5 +10,5 @@ if [[ -n "$SSH_CLIENT" ]] ; then ssh_client='[SSH]'
 fi
 
 # Prompt
-PS1='\n\u@\h\w
+PS1='\n\u@\h$ssh_client\w
 $ '
