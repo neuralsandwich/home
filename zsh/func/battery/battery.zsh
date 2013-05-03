@@ -8,71 +8,80 @@
 # Modified to add support for Apple Mac   #
 ###########################################
 
-if [[ $(uname) == "Darwin" ]] ; then
+if [[ $(which acpi) != "acpi not found" ]] ; then
 
-  function battery_pct_remaining() {
-    if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
-      typeset -F maxcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"MaxCapacity"\ =\ ' | sed -e 's/^.*"MaxCapacity"\ =\ //')
-      typeset -F currentcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"CurrentCapacity"\ =\ ' | sed -e 's/^.*CurrentCapacity"\ =\ //')
-      integer i=$(((currentcapacity/maxcapacity) * 100))
-      echo $i
-    else
-      echo "External Power"
-    fi
-  }
+  if [[ $(uname) == "Darwin" ]] ; then
 
-  function battery_time_remaining() {
-    if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
-      timeremaining=$(ioreg -rc "AppleSmartBattery"| grep '^.*"AvgTimeToEmpty"\ =\ ' | sed -e 's/^.*"AvgTimeToEmpty"\ =\ //')
-      echo "~$((timeremaining / 60)):$((timeremaining % 60))"
-    else
-      echo "∞"
-    fi
-  }
+    function battery_pct_remaining() {
+      if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
+        typeset -F maxcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"MaxCapacity"\ =\ ' | sed -e 's/^.*"MaxCapacity"\ =\ //')
+        typeset -F currentcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"CurrentCapacity"\ =\ ' | sed -e 's/^.*CurrentCapacity"\ =\ //')
+        integer i=$(((currentcapacity/maxcapacity) * 100))
+        echo $i
+      else
+        echo "External Power"
+      fi
+    }
 
-  function battery_pct_prompt () {
-    if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
+    function battery_time_remaining() {
+      if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
+        timeremaining=$(ioreg -rc "AppleSmartBattery"| grep '^.*"AvgTimeToEmpty"\ =\ ' | sed -e 's/^.*"AvgTimeToEmpty"\ =\ //')
+        echo "~$((timeremaining / 60)):$((timeremaining % 60))"
+      else
+        echo "∞"
+      fi
+    }
+
+    function battery_pct_prompt () {
+      if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
+        b=$(battery_pct_remaining)
+        if [ $b -gt 50 ] ; then
+          color='green'
+        elif [ $b -gt 20 ] ; then
+          color='yellow'
+        else
+          color='red'
+        fi
+        echo "%{$fg[$color]%}[$(battery_pct_remaining)%%]%{$reset_color%}"
+      else
+        echo "∞"
+      fi
+    }
+
+  elif [[ $(uname) == "Linux"  ]] ; then
+
+    function battery_pct_remaining() {
+      if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
+        echo "$(acpi | cut -f2 -d ',' | tr -cd '[:digit:]')"
+      fi
+    }
+
+    function battery_time_remaining() {
+      if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
+        echo $(acpi | cut -f3 -d ',')
+      fi
+    }
+
+    function battery_pct_prompt() {
       b=$(battery_pct_remaining)
-      if [ $b -gt 50 ] ; then
-        color='green'
-      elif [ $b -gt 20 ] ; then
-        color='yellow'
+      if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
+        if [ $b -gt 50 ] ; then
+          color='green'
+        elif [ $b -gt 20 ] ; then
+          color='yellow'
+        else
+          color='red'
+        fi
+        echo "%{$fg[$color]%}[$(battery_pct_remaining)%%]%{$reset_color%}"
       else
-        color='red'
+        echo "∞"
       fi
-      echo "%{$fg[$color]%}[$(battery_pct_remaining)%%]%{$reset_color%}"
-    else
-      echo "∞"
-    fi
-  }
+    }
+  fi
+else
+  echo "$fg[red]acpi is not installed$reset_color"
 
-elif [[ $(uname) == "Linux"  ]] ; then
+  battery_time_remaining(){ echo "no power monitor"}
+  battery_pct_prompt(){}
 
-  function battery_pct_remaining() {
-    if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
-      echo "$(acpi | cut -f2 -d ',' | tr -cd '[:digit:]')" 
-    fi
-  }
-
-  function battery_time_remaining() {
-    if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
-      echo $(acpi | cut -f3 -d ',')
-    fi
-  }
-
-  function battery_pct_prompt() {
-    b=$(battery_pct_remaining) 
-    if [[ $(acpi 2&>/dev/null | grep -c '^Battery.*Discharging') -gt 0 ]] ; then
-      if [ $b -gt 50 ] ; then
-        color='green'
-      elif [ $b -gt 20 ] ; then
-        color='yellow'
-      else
-        color='red'
-      fi
-      echo "%{$fg[$color]%}[$(battery_pct_remaining)%%]%{$reset_color%}"
-    else
-      echo "∞"
-    fi
-  }
 fi
