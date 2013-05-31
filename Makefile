@@ -1,17 +1,17 @@
 all: clean build
 
 build:
-	ln -s ~/.config/zshrc ~/.zshrc
-	ln -s ~/.config/zsh/zshenv ~/.zshenv
-	ln -s ~/.config/zsh ~/.zsh
-	ln -s ~/.config/vimrc ~/.vimrc
-	ln -s ~/.config/vim ~/.vim
-	ln -s ~/.config/xinitrc ~/.xinitrc
-	ln -s ~/.config/Xresources ~/.Xresources
-	ln -s ~/.config/gitconfig ~/.gitconfig
-	ln -s ~/.config/bash_profile ~/.bash_profile
-	ln -s ~/.config/bashrc ~/.bashrc
-	ln -s ~/.config/bash_aliases ~/.bash_aliases
+	ln -s ~/.dot/zsh/zshrc ~/.zshrc
+	ln -s ~/.dot/zsh/zshenv ~/.zshenv
+	ln -s ~/.dot/zsh ~/.zsh
+	ln -s ~/.dot/vimrc ~/.vimrc
+	ln -s ~/.dot/vim ~/.vim
+	ln -s ~/.dot/xinitrc ~/.xinitrc
+	ln -s ~/.dot/Xresources ~/.Xresources
+	ln -s ~/.dot/gitconfig ~/.gitconfig
+	ln -s ~/.dot/bash_profile ~/.bash_profile
+	ln -s ~/.dot/bashrc ~/.bashrc
+	ln -s ~/.dot/bash_aliases ~/.bash_aliases
 clean:
 	rm ~/.zshrc
 	rm ~/.zshenv
@@ -25,8 +25,3 @@ clean:
 	rm ~/.bash_profile
 	rm ~/.bash_aliases
 
-test:
-	rm ~/.zshrc
-	rm ~/.zshenv
-	ln -s ~/.config/zsh/zshrc ~/.zshrc
-	ln -s ~/.config/zsh/zshenv ~/.zshenv
