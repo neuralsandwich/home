@@ -23,7 +23,7 @@ if [ "$SHELL" != "/usr/bin/zsh" ] ; then
   chsh -s `which zsh`
 fi
 
-if [ -e !"$HOME/.dot" ] ; then 
+if [ ! -e "$HOME/.dot" ] ; then
  echo "Need to grab my config files!"
  git clone "git@github.com:/NeuralSandwich/home.git" "$HOME/.dot"
 fi
