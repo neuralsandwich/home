@@ -4,6 +4,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/opt
 
 # zsh localtion
 ZSH="$HOME/.zsh"
+DOTFILES="$HOME/.dot"
 
 # fpath
 fpath=($ZSH/func "${fpath[@]}")
@@ -18,7 +19,7 @@ source "$ZSH/func/battery/battery.zsh"
 # https://github.com/olivierverdier/zsh-git-prompt
 source "$ZSH/git-prompt/zshrc.sh"
 
-source "$HOME/.config/ssh-agent/ssh-agent.sh"
+source "$HOME/$DOT_FILES/ssh-agent/ssh-agent.sh"
 
 # Variables
 export EDITOR="vim"

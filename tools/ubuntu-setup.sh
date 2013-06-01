@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # List of programs I am found of
-INSTALL_LIST = "htop zsh git vim curl acpi vlc skype build-essential rails"
+INSTALL_LIST = "htop zsh git curl acpi vlc skype build-essential rails libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev ruby-dev mercurial"
 
 echo "Time to install stuff!!!"
 
@@ -17,6 +17,20 @@ if [ `which google-chrome` != "/usr/bin/google-chrome" ] ; then
   echo "Don't worry! apt-get to the rescue!"
   sudo apt-get -f -y
 fi
+
+echo "Lets install vim!.. From scratch"
+cd "$HOME"
+hg clone https://code.google.com/p/vim/
+cd vim
+./configure --with-features=huge \
+            --enable-rubyinterp \
+            --enable-pythoninterp \
+            --enable-perlinterp \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr
+
+make VIMRUNTIMEDIR=/usr/share/vim/vim73
+sudo make install
+cd -
 
 if [ "$SHELL" != "/usr/bin/zsh" ] ; then
   echo "What time is it? ZSH Time!"
