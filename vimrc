@@ -51,6 +51,7 @@ set hidden
 
 " Better command-line completion
 set wildmenu
+set wildmode=full
 
 " Show partial commands in the last line of the screen
 set showcmd
@@ -64,6 +65,8 @@ set hlsearch
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
 " set nomodeline
 
+" Some vim-latex stuff
+set grepprg=grep\ -nH\ $*
 
 "------------------------------------------------------------
 " Usability options {{{1
@@ -141,6 +144,11 @@ set expandtab
 "set shiftwidth=2
 "set tabstop=2
 
+"------------------------------------------------------------
+" Set text width
+set textwidth=80
+set colorcolumn=80
+
 
 "------------------------------------------------------------
 " Mappings {{{1
@@ -166,20 +174,3 @@ noremap <Right> <NOP>
 "-------------------------------------------------------------
 " Enable Pathogen
 execute pathogen#infect()
-
-" Vundle configuration
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Vundle bundles
-" original repos on github
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-" YouCompleteMe -- Code completion
-Bundle 'Valloric/YouCompleteMe'
-
-filetype plugin indent on " required!
