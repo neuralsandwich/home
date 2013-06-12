@@ -32,6 +32,8 @@ colors
 setopt prompt_subst
 # Show completion on first TAB
 setopt menucomplete
+# AutoCD
+setopt autocd
 
 # Load completions for Ruby, Git, etc.
 autoload compinit

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # List of programs I am found of
-INSTALL_LIST = "htop zsh git vim curl acpi vlc skype build-essential rails"
+INSTALL_LIST = "htop zsh git vim curl acpi vlc skype build-essential rails tmux"
 
 echo "Time to install stuff!!!"
 
@@ -34,3 +34,5 @@ gsettings set com.canonical.desktop.interface scrollbar-mode normal
 if [ -e !"$HOME/dev" ] ; then
   mkdir "$HOME/dev"
 fi
+
+vim +BundleInstall +qall

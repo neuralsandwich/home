@@ -166,20 +166,3 @@ noremap <Right> <NOP>
 "-------------------------------------------------------------
 " Enable Pathogen
 execute pathogen#infect()
-
-" Vundle configuration
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Vundle bundles
-" original repos on github
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-" YouCompleteMe -- Code completion
-Bundle 'Valloric/YouCompleteMe'
-
-filetype plugin indent on " required!
