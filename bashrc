@@ -4,7 +4,7 @@
 # Some colors might look different of some terminals.
 # Taken from http://tldp.org/LDP/abs/html/sample-bashrc.html
 
-
+if shopt -q login_shell; then
 # Normal Colors
 Black='\e[0;30m'        # Black
 Red='\e[0;31m'          # Red
@@ -155,4 +155,5 @@ elif [[ `cat /etc/issue | grep -o -P ^Ubuntu` = "Ubuntu" ]]; then
                          \`.-:-\'"
 else
   echo "Welcome $USER!"
+fi
 fi
