@@ -14,7 +14,7 @@ set background=dark
 "              on this file is still a good idea.
 
 "------------------------------------------------------------
-" Features {{{1
+" Features
 "
 " These options and commands enable some very useful features in Vim, that
 " no user should have to live without.
@@ -33,7 +33,7 @@ syntax on
 
 
 "------------------------------------------------------------
-" Must have options {{{1
+" Must have options
 "
 " These are highly recommended options.
 
@@ -69,7 +69,7 @@ set hlsearch
 set grepprg=grep\ -nH\ $*
 
 "------------------------------------------------------------
-" Usability options {{{1
+" Usability options
 "
 " These are options that users frequently set in their .vimrc. Some of them
 " change Vim's behaviour in ways which deviate from the true Vi way, but
@@ -129,7 +129,7 @@ set pastetoggle=<F11>
 
 
 "------------------------------------------------------------
-" Indentation options {{{1
+" Indentation options
 "
 " Indentation settings according to personal preference.
 
@@ -149,9 +149,8 @@ set expandtab
 set textwidth=80
 set colorcolumn=80
 
-
 "------------------------------------------------------------
-" Mappings {{{1
+" Mappings
 "
 " Useful mappings
 
