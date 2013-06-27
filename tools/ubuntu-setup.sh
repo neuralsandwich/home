@@ -1,7 +1,11 @@
 #!/bin/sh
 
 # List of programs I am found of
-INSTALL_LIST = "htop zsh git curl acpi vlc skype build-essential rails libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev ruby-dev mercurial gedit-latex-plugin"
+INSTALL_LIST="htop zsh git curl tmux axel cvs vim acpi vlc 
+build-essential rails libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev
+libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev
+python-dev ruby-dev mercurial gedit-latex-plugin texlive gedit-latex-plugin
+virtualbox"
 
 echo "Time to install stuff!!!"
 
@@ -10,14 +14,16 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -y $INSTALL_LIST
 
-if [ `which google-chrome` != "/usr/bin/google-chrome" ] ; then
+if [ "`which google-chrome`" != "/usr/bin/google-chrome" ] ; then
   echo "Installing chrome"
-  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O "$HOME/Downloads/chrome.deb"
-  sudo dpkg -i "$HOME/Downloads/chrome.deb"
+  wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O "chrome.deb"
+  sudo dpkg -i "chrome.deb"
   echo "Don't worry! apt-get to the rescue!"
-  sudo apt-get -f -y
+  sudo apt-get -f install -y
+  rm -f chrome.deb
 fi
 
+if [ ! -e "$HOME/vim" ] ; then
 echo "Lets install vim!.. From scratch"
 cd "$HOME"
 hg clone https://code.google.com/p/vim/
@@ -31,6 +37,7 @@ cd vim
 make VIMRUNTIMEDIR=/usr/share/vim/vim73
 sudo make install
 cd -
+fi
 
 if [ "$SHELL" != "/usr/bin/zsh" ] ; then
   echo "What time is it? ZSH Time!"
@@ -48,5 +55,3 @@ gsettings set com.canonical.desktop.interface scrollbar-mode normal
 if [ -e !"$HOME/dev" ] ; then
   mkdir "$HOME/dev"
 fi
-
-vim +BundleInstall +qall
