@@ -1,0 +1,33 @@
+# Enviroment
+# Path
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin/eclipse/:"
+
+# zsh localtion
+ZDOTDIR="$HOME/.zsh"
+DOTFILES="$HOME/.dot"
+
+# fpath
+fpath=($ZSH/func "${fpath[@]}")
+fpath=($ZSH/func/battery/ "${fpath[@]}")
+
+# Added my battery plugin from
+# oh-my-zsh
+# http://github.com/NeuralSandwich/oh-my-zsh.git
+source "$ZSH/func/battery/battery.zsh"
+
+# Git prompt function
+# https://github.com/olivierverdier/zsh-git-prompt
+source "$ZSH/git-prompt/zshrc.sh"
+
+source "$DOTFILES/ssh-agent/ssh-agent.sh"
+
+# Variables
+export EDITOR="vim"
+export PAGER="less -i"
+export VISUAL="$EDITOR"
+
+# Zsh settings for history
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTSIZE=25000
+export HISTFILE="$HOME/.zsh_history"
+export SAVEHIST=10000

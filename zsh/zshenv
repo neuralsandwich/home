@@ -54,8 +54,8 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 
 # Better history searching
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
+bindkey  "${key[PageUp]}"    history-beginning-search-backward
+bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 # Fix Keyboard keys
 # create a zkbd compatible hash;
