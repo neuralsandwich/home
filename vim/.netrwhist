@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/etc/ssh'
 let g:netrw_dirhist_2='/home/neuralsandwich/.config'
 let g:netrw_dirhist_3='/home/neuralsandwich/.config/zsh'
 let g:netrw_dirhist_4='/home/neuralsandwich/Documents/wbl-report'
 let g:netrw_dirhist_5='/home/seanj/.config'
+let g:netrw_dirhist_6='/home/neuralsandwich/.dot/zsh'

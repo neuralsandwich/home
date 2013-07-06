@@ -24,4 +24,3 @@ clean:
 	rm ~/.bashrc
 	rm ~/.bash_profile
 	rm ~/.bash_aliases
-
