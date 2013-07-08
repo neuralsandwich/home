@@ -6,7 +6,7 @@
 
 # Path
 typeset -U path
-path=(~/bin $path)
+path=(~/bin ~/.rvm/bin $path)
 
 # Zsh Function Path
 typeset -U fpath
@@ -78,6 +78,9 @@ source "$ZSH/zkeybindings"
 
 # alias
 source "$ZSH/zsh_aliases"
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ###############
 # Set Prompts #
