@@ -1,8 +1,8 @@
 # Neuralsandwich's keybindings
 
 # Better history searching
-# bindkey  "${key[PageUp]}"    history-beginning-search-backward
-# bindkey  "${key[PageDown]}"  history-beginning-search-forward
+[[ -n "${key[PageUp]}" ]] && bindkey  "${key[PageUp]}"    history-beginning-search-backward
+[[ -n "${key[PageDown]}" ]] && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
 # Fix Keyboard keys
 # create a zkbd compatible hash;
