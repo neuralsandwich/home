@@ -9,10 +9,12 @@ build:
 	ln -s ~/.dot/xinitrc ~/.xinitrc
 	ln -s ~/.dot/Xresources ~/.Xresources
 	ln -s ~/.dot/gitconfig ~/.gitconfig
-	ln -s ~/.dot/bash_profile ~/.bash_profile
 	ln -s ~/.dot/bashrc ~/.bashrc
+	ln -s ~/.dot/bash_profile ~/.bash_profile
 	ln -s ~/.dot/bash_aliases ~/.bash_aliases
 	ln -s ~/.dot/gemrc ~/.gemrc
+	ln -s ~/.dot/tmux.conf ~/.tmux.conf
+
 clean:
 	rm ~/.zshrc
 	rm ~/.zshenv
@@ -26,3 +28,4 @@ clean:
 	rm ~/.bash_profile
 	rm ~/.bash_aliases
 	rm ~/.gemrc
+	rm ~/.tmux.conf
