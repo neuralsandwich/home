@@ -162,6 +162,11 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
 
 "------------------------------------------------------------
 " Disable Arrow keys
