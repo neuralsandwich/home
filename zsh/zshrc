@@ -67,9 +67,6 @@ source "$ZSH/func/welcome/welcome.zsh"
 # SSH Agent
 source "$DOTFILES/ssh-agent/ssh-agent.sh"
 
-# box_name
-source "$ZSH/func/box_name/box_name.zsh"
-
 # ssh_client
 source "$ZSH/func/ssh_client/ssh_client.zsh"
 
@@ -99,4 +96,4 @@ $ '
 
 # Right Prompt
 local return_status="%{$fg[red]%}%(?..✘)%{$reset_color%}"
-RPROMPT='${return_status}$(battery_time_remaining) $(battery_pct_prompt)%{$reset_color%}'
+RPROMPT='${return_status}[%t]$(battery_time_remaining) $(battery_pct_prompt)%{$reset_color%}'
