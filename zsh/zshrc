@@ -6,7 +6,7 @@
 
 # Path
 typeset -U path
-path=(~/bin ~/.rvm/bin $path)
+path=(~/opt ~/bin ~/.rvm/bin $path)
 
 # Zsh Function Path
 typeset -U fpath

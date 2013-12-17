@@ -149,6 +149,8 @@ set expandtab
 set textwidth=80
 set colorcolumn=80
 
+set nocp
+
 "------------------------------------------------------------
 " Mappings
 "
@@ -167,6 +169,10 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+"------------------------------------------------------------
+" Omnicppcomplete ctag binding
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "------------------------------------------------------------
 " Disable Arrow keys
