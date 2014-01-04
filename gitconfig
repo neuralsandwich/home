@@ -1,8 +1,6 @@
 [user]
 	name = Sean Jones
 	email = neuralsandwich@gmail.com
-[credential]
-	helper = osxkeychain
 [core]
 	autocrlf = input
 	editor = vim
