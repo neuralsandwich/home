@@ -1,41 +1,74 @@
-" .vimrc for neuralsandwich
-" Customizations made
-
-set background=dark
-" colorscheme solarized
-
-" Downloaded from Vim.Wikia.com
-
-" URL: http://vim.wikia.com/wiki/Example_vimrc
-" Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
-" Description: A minimal, but feature rich, example .vimrc. If you are a
-"              newbie, basing your first .vimrc on this file is a good choice.
-"              If you're a more advanced user, building your own .vimrc based
-"              on this file is still a good idea.
-
-"------------------------------------------------------------
-" Features
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimrc
+" Maintainer:
+"   Sean Jones (NeuralSandwich)
+"   http://neuralsandwich.com
 "
-" These options and commands enable some very useful features in Vim, that
-" no user should have to live without.
+" Sections:
+"   -> General
+"   -> VIM UI
+"   -> Colours and Fonts
+"   -> Files and backups
+"   -> Text, tab and indent
+"   -> Visual mode
+"   -> Nagivating tabs and buffers
+"   -> Status line
+"   -> Editing mappings
+"   -> Vimgrep searching
+"   -> Misc
+"   -> Helper
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set history storage limit
+
+set history=500
+
+" Enable filetype plugins. Attempt to determine the type of a file based on its
+" name and possibly its contents. Use this to allow intelligent auto-indenting
+" for each filetype, and for plugins that are filetype specific.
+filetype indent on
+filetype plugin on
+
+" Set to auto read when a file is changed from the outside
+set autoread
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-" Attempt to determine the type of a file based on its name and possibly its
-" contents. Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
 
-" Enable syntax highlighting
-syntax on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM UI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Move content when cursor is 7 lines while vertically scrolling
+set so=7
 
+" Better command-line completion
+set wildmenu
+set wildmode=full
 
-"------------------------------------------------------------
-" Must have options
-"
-" These are highly recommended options.
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+else
+  set wildignore+=.git\*,.hg\*,.svn\*
+endif
+
+" Display the cursor position on the last line of the screen or in the status
+" line of a window
+set ruler
+
+" Set the command window height to 2 lines, to avoid many cases of having to
+" "press <Enter> to continue"
+set cmdheight=2
+
+" Show partial commands in the last line of the screen
+set showcmd
 
 " One of the most important options to activate. Allows you to switch from an
 " unsaved buffer without saving it first. Also allows you to keep an undo
@@ -43,106 +76,172 @@ syntax on
 " saving, and swap files will keep you safe if your computer crashes.
 set hidden
 
-" Note that not everyone likes working this way (with the hidden option).
-" Alternatives include using tabs or split windows instead of re-using the same
-" window for multiple buffers, and/or:
-" set confirm
-" set autowriteall
+" Allow backspacing over autoindent, line breaks and start of insert action
+set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 
-" Better command-line completion
-set wildmenu
-set wildmode=full
-
-" Show partial commands in the last line of the screen
-set showcmd
+" Ignore case when searching, except when using capital letters
+set ignorecase
+set smartcase
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
 
-" Modelines have historically been a source of security vulnerabilities. As
-" such, it may be a good idea to disable them and use the securemodelines
-" script, <http://www.vim.org/scripts/script.php?script_id=1876>.
-" set nomodeline
+" Make search act like search in modern browsers
+set incsearch
 
-" Some vim-latex stuff
-set grepprg=grep\ -nH\ $*
+" Don't redraw while executing marcos (Performance)
+set lazyredraw
 
-"------------------------------------------------------------
-" Usability options
-"
-" These are options that users frequently set in their .vimrc. Some of them
-" change Vim's behaviour in ways which deviate from the true Vi way, but
-" which are considered to add usability. Which, if any, of these options to
-" use is very much a personal preference, but they are harmless.
+" For regular expressions turn magic on
+set magic
 
-" Use case insensitive search, except when using capital letters
-set ignorecase
-set smartcase
+" Show matching brackets when test indicatior is over them
+set showmatch
+" Set how many tenth of second to blink when matching brackets
+set mat=2
 
-" Allow backspacing over autoindent, line breaks and start of insert action
-set backspace=indent,eol,start
+" Use visual bell instead of beeping when doing something wrong
+set visualbell
 
-" When opening a new line and no filetype-specific indenting is enabled, keep
-" the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
+" Stop annoying sounds
+set noerrorbells
+set t_vb=
+set tm=500
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+
+" Instead of failing a command because of unsaved changes, instead raise a
+" dialogue asking if you wish to save changed files.
+set confirm
+
+" Enable use of the mouse for all modes
+set mouse=a
+
+" Display line numbers on the left
+set number
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colours and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax on
+
+set background=dark
+
+" set extra option when running in GUI mode
+if has ("gui_running")
+  set guioptions-=T
+  set guioptions-=e
+  set t_Co=256
+  set guitablabel=%m\ %t
+endif
+
+" Set utf8 as standard encoding and en_GB as the stardard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn off backups
+set nobackup
+set nowb
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indentation settings according to personal preference.
+
+" Indentation settings for using 4 spaces instead of tabs.
+" Do not change 'tabstop' from its default value of 8 with this setup.
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" Be smart when using tabs
+set smarttab
+
+" Auto indent
+set ai
+
+" Smart indent
+set si
+
+" Wrap lines
+set wrap
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
 set nostartofline
 
-" Display the cursor position on the last line of the screen or in the status
-" line of a window
-set ruler
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual mode related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual mode pressing * or # searches for current selection
+" Super useful! From an idea by Michael Neumann
+vnoremap <silent> * :call VisualSelection('f', '')<CR>
+vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Moving around, tabs, windows and buffers
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" Map <space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <c-space> ?
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Close the current buffer
+map <leader>bd :Bclose<cr>
+
+" Close all the buffers
+map <leader>ba: 1,1000 bd!<cr>
+
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>t<leader> :tabnext
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status line
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 
-" Instead of failing a command because of unsaved changes, instead raise a
-" dialogue asking if you wish to save changed files.
-set confirm
-
-" Use visual bell instead of beeping when doing something wrong
-set visualbell
-
-" And reset the terminal code for the visual bell. If visualbell is set, and
-" this line is also included, vim will neither flash nor beep. If visualbell
-" is unset, this does nothing.
-set t_vb=
-
-" Enable use of the mouse for all modes
-set mouse=a
-
-" Set the command window height to 2 lines, to avoid many cases of having to
-" "press <Enter> to continue"
-set cmdheight=2
-
-" Display line numbers on the left
-set number
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
 " Use <F11> to toggle between 'paste' and 'nopaste'
 set pastetoggle=<F11>
-
-
-"------------------------------------------------------------
-" Indentation options
-"
-" Indentation settings according to personal preference.
-
-" Indentation settings for using 2 spaces instead of tabs.
-" Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" Indentation settings for using hard tabs for indent. Display tabs as
-" two characters wide.
-"set shiftwidth=2
-"set tabstop=2
 
 "------------------------------------------------------------
 " Set text width
@@ -164,7 +263,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-
+ 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
@@ -175,6 +274,10 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-"-------------------------------------------------------------
-" Enable Pathogen
-execute pathogen#infect()
+"------------------------------------------------------------
+" Enable plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
