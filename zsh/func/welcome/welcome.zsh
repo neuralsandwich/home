@@ -21,5 +21,3 @@ fi
 
 # Call the welcome function!
 welcome
-echo "Dead Lines"
-ruby ~/.dot/tools/countdown.rb
