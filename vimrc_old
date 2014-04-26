@@ -235,7 +235,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -247,6 +247,8 @@ set pastetoggle=<F11>
 " Set text width
 set textwidth=80
 set colorcolumn=80
+
+set nocp
 
 "------------------------------------------------------------
 " Mappings
@@ -266,6 +268,10 @@ nmap <leader>l :set list!<CR>
  
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+"------------------------------------------------------------
+" Omnicppcomplete ctag binding
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "------------------------------------------------------------
 " Disable Arrow keys
