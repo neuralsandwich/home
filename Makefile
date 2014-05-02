@@ -14,6 +14,7 @@ build:
 	ln -s ~/.dot/bash_aliases ~/.bash_aliases
 	ln -s ~/.dot/gemrc ~/.gemrc
 	ln -s ~/.dot/tmux.conf ~/.tmux.conf
+	ln -s ~/.dot/hgrc ~/.hgrc
 
 clean:
 	rm ~/.zshrc
@@ -29,3 +30,4 @@ clean:
 	rm ~/.bash_aliases
 	rm ~/.gemrc
 	rm ~/.tmux.conf
+	rm ~/.hgrc
