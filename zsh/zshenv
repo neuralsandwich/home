@@ -14,4 +14,6 @@ export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
 export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=10000
-export GPGKEY=8A6C3D34
+export GPGKEY="8A6C3D34"
+export DEBFULLNAME="Sean Jones"
+export DEBEMAIL="neuralsandwich@gmail.com"

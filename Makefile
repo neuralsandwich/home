@@ -4,7 +4,7 @@ build:
 	ln -s ~/.dot/zsh/zshrc ~/.zshrc
 	ln -s ~/.dot/zsh/zshenv ~/.zshenv
 	ln -s ~/.dot/zsh ~/.zsh
-	ln -s ~/.dot/vimrc ~/.vimrc
+	ln -s ~/.dot/vim/vimrc ~/.vimrc
 	ln -s ~/.dot/vim ~/.vim
 	ln -s ~/.dot/xinitrc ~/.xinitrc
 	ln -s ~/.dot/Xresources ~/.Xresources
