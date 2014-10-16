@@ -48,3 +48,5 @@
     new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
     bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
     hist = log --graph --date=short --all --pretty=format:'%C(blue)%h%C(reset) %C(green)%ad%C(reset) | %s %C(dim white)[%an]%C(reset)%C(yellow)%d%C(reset)'
+[rerere]
+	enable = true
