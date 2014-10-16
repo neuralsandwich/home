@@ -1,5 +1,7 @@
 # neuralsandwich's zsh_aliases
 
+alias hometime='sudo shutdown -P -h now'
+
 ## Useful command aliases
 alias df='df -h'
 alias du='du -h -c'
