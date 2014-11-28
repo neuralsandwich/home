@@ -51,8 +51,7 @@ if [[ -n "$SSH_CLIENT" ]] ; then ssh_client='[SSH]'
 fi
 
 # Prompt
-PS1='\n\u@\h$ssh_client\w
-$ '
+PS1='\n\u@\h$ssh_client\w\n$ '
 
 ## Welcome Message ##
 if [ `uname -n` = "raspberrypi" ]; then
@@ -158,4 +157,5 @@ else
 fi
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+CCACHE_DIR=$HOME/dev/.ccache
+PATH=/usr/lib/ccache:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
