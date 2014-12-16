@@ -101,7 +101,7 @@ set magic
 set showmatch
 " Set how many tenth of second to blink when matching brackets
 set mat=2
-
+set matchtime=3
 " Use visual bell instead of beeping when doing something wrong
 set visualbell
 
@@ -122,6 +122,7 @@ set mouse=a
 
 " Display line numbers on the left
 set number
+set relativenumber
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colours and Fonts
@@ -159,8 +160,8 @@ set nowb
 
 " Indentation settings for using 4 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 " Be smart when using tabs
@@ -179,6 +180,9 @@ set wrap
 " While this behaviour deviates from that of Vi, it does what most users
 " coming from other editors would expect.
 set nostartofline
+
+" remove trailing white space
+autocmd FileType c,cpp,java,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual mode related
@@ -262,6 +266,9 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
+
+" Make % visually highlighy - it is the most commom use case.
+noremap % v%
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
