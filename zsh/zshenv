@@ -21,3 +21,6 @@ export GPGKEY="8A6C3D34"
 # Debian package information
 export DEBFULLNAME="Sean Jones"
 export DEBEMAIL="neuralsandwich@gmail.com"
+
+# Ccache Options
+export CCACHE_DIR="$HOME/dev/.ccache"
