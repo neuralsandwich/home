@@ -276,6 +276,10 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+
+map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.4.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.4.py<cr>
+
 "------------------------------------------------------------
 " Omnicppcomplete ctag binding
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
