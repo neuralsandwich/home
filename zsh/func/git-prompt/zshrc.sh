@@ -21,9 +21,7 @@ git_prompt() {
   ahead '%{\e[1;0m%}↑' \
   behind '%{\e[1;0m%}↓'`
 
-  if [ $? -ne 0 ]; then
-    echo "Borked"
-  else
+  if [ $? -eq 0 ]; then
     echo "$prompt"
   fi
 }
