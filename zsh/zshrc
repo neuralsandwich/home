@@ -6,7 +6,8 @@
 
 # Path
 typeset -U path
-path=(/usr/lib/ccache /opt ~/bin/ ~/bin/git-remote-hg ~/bin/project-creator/ ~/.rvm/bin /opt/eclipse ~/bin/git-hg/bin $path)
+path=(/opt/local/bin ~/bin/ ~/bin/git-remote-hg ~/bin/project-creator/
+~/.rvm/bin /opt/eclipse ~/bin/git-hg/bin $path)
 
 # Zsh Function Path
 typeset -U fpath
@@ -58,7 +59,7 @@ zstyle ':completion:*' menu select
 source "$ZSH/func/battery/battery.zsh"
 
 # Git Prompt
-# https://github.com/olivierverdier/zsh-git-prompt
+#https://github.com/kbenzie/git-prompt.git
 source "$ZSH/func/git-prompt/zshrc.sh"
 
 # Weclome
@@ -91,9 +92,12 @@ source "$ZSH/zsh_aliases"
 
 # Prompt
 PROMPT='
-[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$fg[red]%}%{$ssh_client%}%{$reset_color%}:%{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}]$(git_super_status)
+[%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$fg[red]%}\
+%{$ssh_client%}%{$reset_color%}:%{$fg_bold[green]%}${PWD/#$HOME/~}\
+%{$reset_color%}]$(git_prompt)
 [%t] $ '
 
 # Right Prompt
 local return_status="%{$fg[red]%}%(?..✘)%{$reset_color%}"
-RPROMPT='${return_status}$(battery_time_remaining) $(battery_pct_prompt)%{$reset_color%}'
+RPROMPT='${return_status}$(battery_time_remaining) $(battery_pct_prompt)\
+%{$reset_color%}'
