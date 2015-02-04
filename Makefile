@@ -16,6 +16,7 @@ build:
 	ln -s ~/.dot/tmux.conf ~/.tmux.conf
 	ln -s ~/.dot/hgrc ~/.hgrc
 	ln -s ~/.dot/i3 ~/.i3
+	ln -s ~/.dot/dunstrc ~/.dunstrc
 
 clean:
 	rm ~/.zshrc
@@ -33,3 +34,4 @@ clean:
 	rm ~/.tmux.conf
 	rm ~/.hgrc
 	rm -r ~/.i3
+	rm ~/.dunstrc
