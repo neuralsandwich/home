@@ -15,6 +15,7 @@ build:
 	ln -s ~/.dot/gemrc ~/.gemrc
 	ln -s ~/.dot/tmux.conf ~/.tmux.conf
 	ln -s ~/.dot/hgrc ~/.hgrc
+	ln -s ~/.dot/i3 ~/.i3
 
 clean:
 	rm ~/.zshrc
@@ -31,3 +32,4 @@ clean:
 	rm ~/.gemrc
 	rm ~/.tmux.conf
 	rm ~/.hgrc
+	rm -r ~/.i3
