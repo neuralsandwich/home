@@ -76,11 +76,15 @@ source "$ZSH/func/extract/extract.zsh"
 # mkarchive
 source "$ZSH/func/mkarchive/mkarchive.zsh"
 
+# zsh syntax highlighter
+source "$ZSH/func/syntax-highlighting/zsh-syntax-highlighting.zsh"
+
 # key bindings
 source "$ZSH/zkeybindings"
 
 # alias
 source "$ZSH/zsh_aliases"
+
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
