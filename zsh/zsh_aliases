@@ -18,12 +18,14 @@ alias ll='ls -l'
 alias lsd='ls -s | grep "^d"'
 alias reload='source $HOME/.zshenv && source $HOME/.zshrc'
 
+alias emacs="emacs -nw"
+
 # Git Aliases
 alias ga='git add'
 alias gap='git add -p'
 alias gp='git push'
 alias gl='git log'
-alias gs='git status'
+alias gs='git status -sb'
 alias gd='git diff'
 alias gm='git commit -m'
 alias gma='git commit -am'
