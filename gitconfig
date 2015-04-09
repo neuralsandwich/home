@@ -39,11 +39,12 @@
 [alias]
     co = checkout
     ci = commit
-    st = status
+    st = "status -sb"
     br = branch
     type = cat-file -t
     dump = cat-file -p
     ls = log --oneline
+    unstage = 'reset HEAD --'
     caa = commit -a --amend -C HEAD
     new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
     bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
@@ -51,3 +52,5 @@
     beginnings = log --reverse --date=short --pretty=format:'%C(blue)%h%C(reset) %C(green)%ad%C(reset) | %s %C(dim white)[%an]%C(reset)%C(yellow)%d%C(reset)'
 [rerere]
 	enable = true
+[diff]
+	tool = git-meld
