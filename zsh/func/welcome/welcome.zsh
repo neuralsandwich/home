@@ -2,7 +2,7 @@
 #
 ## Welcome Message ##
 if [ `uname -n` = "raspberrypi" ]; then
-  source "$ZSH/func/welcome/raspberypi.welcome.zsh"
+  source "$ZSH/func/welcome/raspberrypi.welcome.zsh"
 elif [[ `uname` = "Darwin" ]] ; then
   source "$ZSH/func/welcome/macosx.welcome.zsh"
 elif [[ `cat /etc/issue | grep -o -P ^Debian` = "Debian" ]]; then

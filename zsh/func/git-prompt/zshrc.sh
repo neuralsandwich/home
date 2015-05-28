@@ -7,8 +7,26 @@ colors
 # Allow for functions in the prompt.
 setopt PROMPT_SUBST
 
+__GIT_PROMPT_AVAILABLE="no"
+
+setup()
+{
+  local NoGitPrompt="git-prompt not found"
+
+  if [[ "${NoGitPrompt}" == $(which git-prompt) ]] ; then
+      source "${ZSH}/func/git-prompt/zshrc-gitstatus.sh"
+  else
+      $__GIT_PROMPT_AVAILABLE="yes"
+  fi
+}
+
 git_prompt() {
-  prompt=`git-prompt \
+  
+  if [[ ${__GIT_PROMPT_AVAILABLE} == "no" ]] ; then
+      echo "$(git_super_status)"
+  else
+
+      prompt=`git-prompt \
   prefix '(' \
   suffix '%{\e[1;0m%})' \
   branch '%{\e[1;35m%}' \
@@ -21,7 +39,10 @@ git_prompt() {
   ahead '%{\e[1;0m%}↑' \
   behind '%{\e[1;0m%}↓'`
 
-  if [ $? -eq 0 ]; then
-    echo "$prompt"
+      if [ $? -eq 0 ]; then
+	  echo "$prompt"
+      fi
   fi
 }
+
+setup
