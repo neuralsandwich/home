@@ -59,6 +59,8 @@
 (define-key global-map [f10] 'previous-error)
 (define-key global-map [f11] 'next-error)
 
+(global-set-key (kbd "M-[") 'compile)
+
 (set-foreground-color "burlywood3")
 (set-background-color "#161616")
 (set-cursor-color "#40FF40")

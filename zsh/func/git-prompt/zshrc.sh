@@ -9,14 +9,13 @@ setopt PROMPT_SUBST
 
 __GIT_PROMPT_AVAILABLE="no"
 
-setup()
-{
+setup() {
   local NoGitPrompt="git-prompt not found"
 
   if [[ "${NoGitPrompt}" == $(which git-prompt) ]] ; then
       source "${ZSH}/func/git-prompt/zshrc-gitstatus.sh"
   else
-      $__GIT_PROMPT_AVAILABLE="yes"
+      __GIT_PROMPT_AVAILABLE="yes"
   fi
 }
 
