@@ -6,8 +6,7 @@
 
 # Path
 typeset -U path
-path=(/opt/local/bin ~/bin/git-remote-hg ~/bin/project-creator/
-~/.rvm/bin /opt/eclipse $path)
+path=(/opt/local/bin /usr/local/autoconf/bin $path)
 
 # Zsh Function Path
 typeset -U fpath
