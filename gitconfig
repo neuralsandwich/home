@@ -44,6 +44,7 @@
     type = cat-file -t
     dump = cat-file -p
     ls = log --oneline
+    mirror = clone --mirror
     unstage = 'reset HEAD --'
     caa = commit -a --amend -C HEAD
     new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
