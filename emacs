@@ -15,6 +15,10 @@
 (load "/usr/share/emacs/site-lisp/clang-format-3.4/clang-format.el")
 (global-set-key (kbd "M-p") 'clang-format-buffer)
 
+;; Load cmake mode
+(setq load-path (cons (expand-file-name "~/.emacs.d/lisp") load-path))
+(require 'cmake-mode)
+
 ;; Set Editor style
 ;; Set colours
 (global-hl-line-mode 1)
@@ -37,7 +41,7 @@
 (display-time)
 
 ;; Bright red TODOS
-(setq fixme-modes '(c++-mode c-mode emacs-lisp-mode))
+(setq fixme-modes '(c++-mode c-mode emacs-lisp-mode cmake-mode))
 (make-face 'font-lock-fixme-face)
 (make-face 'font-lock-study-face)
 (make-face 'font-lock-important-face)
@@ -62,3 +66,6 @@
 (set-foreground-color "burlywood3")
 (set-background-color "#161616")
 (set-cursor-color "#40FF40")
+
+;;Initalise the GNU Emacs Lisp Package Archive
+(package-initialize)
