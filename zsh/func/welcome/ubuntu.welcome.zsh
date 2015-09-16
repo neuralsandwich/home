@@ -18,7 +18,7 @@ function welcome() {
           .--  -++++++++/-.-::-\`     Memory Free/Total : `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB
         .::::-   :-----:/+++/++/.    Load Averages     : ${one} ${five} ${fifteen}
        -:::::-.          .:++++++:   Processes         : `ps aux | wc -l | tr -d ' '`
-  ,,, .:::::-\`             .++++++-  Local IP          : `/sbin/ifconfig eth0 | grep 'inet addr' | cut -d ':' -f 2 | cut -d ' ' -f 1`
+  ,,, .:::::-\`             .++++++-  Local IP          : `/sbin/ifconfig eth1 | grep 'inet addr' | cut -d ':' -f 2 | cut -d ' ' -f 1`
 ./+++/-\`-::-                ./////:  Weather Edinburgh : `curl -s 'http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|EDINBURGH|' | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`
 +++++++ .::-
 ./+++/-\`-::-                :yyyyyo

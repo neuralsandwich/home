@@ -15,11 +15,24 @@ if [ -f ~/.Xresources ]; then
   xrdb -merge ~/.Xresources
 fi
 
-while true; do
-  xsetroot -name "$( date +"%F %T" )"
-sleep 1
-done &
-# Cammand for i3 Session
-#exec i3 -V >> ~/.i3/i3log 2>&1
-# Command for Mate Session
-exec mate-session
+export PATH=${PATH}:/Users/neuralsandwich/dev/dwm/
+export DATE=`date +"%Y-%m-%d"`
+
+clear mod1
+clear mod2
+keycode 71 = Alt_L
+add mod2 = Alt_L
+keycode 63 = Meta_L
+add mod1 = Meta_L
+keycode 119 = Insert
+
+while true
+do
+    xsetroot -name "$DATE"
+      sleep 3600
+    done &amp;
+     
+    #xsetroot -solid '#4a525a'
+    #xmodmap -e 'remove Mod2 = Meta_L' -e 'add Mod1 = Meta_L'
+     
+    exec dwm

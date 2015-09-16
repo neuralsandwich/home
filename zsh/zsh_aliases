@@ -18,6 +18,8 @@ alias ll='ls -l'
 alias lsd='ls -s | grep "^d"'
 alias reload='source $HOME/.zshenv && source $HOME/.zshrc'
 
+alias emacs="emacs -nw"
+
 # Git Aliases
 alias ga='git add'
 alias gap='git add -p'

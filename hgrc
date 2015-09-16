@@ -1,5 +1,4 @@
 [ui]
 username = Sean Jones <neuralsandwich@gmail.com>
 [extensions]
-hggit = 
 hgext.bookmarks =

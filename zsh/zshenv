@@ -1,5 +1,8 @@
 # neuralsandwich's zshenv
 
+# Emacs key bindings
+bindkey -e
+
 # Dot File Localtions
 ZSH="$HOME/.zsh"
 DOTFILES="$HOME/.dot"

@@ -19,7 +19,7 @@
 [core]
     autocrlf = input
     editor = vim
-    excludesfile = /Users/neuralsandwich/.gitignore
+	excludesfile = /Users/neuralsandwich/.gitignore_global
     pager = less
 [push]
     default = current
@@ -39,11 +39,12 @@
 [alias]
     co = checkout
     ci = commit
-    st = status
+    st = "status -sb"
     br = branch
     type = cat-file -t
     dump = cat-file -p
     ls = log --oneline
+    unstage = 'reset HEAD --'
     caa = commit -a --amend -C HEAD
     new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
     bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
@@ -52,3 +53,5 @@
     tags = tag -l
 [rerere]
 	enable = true
+[diff]
+	tool = git-meld

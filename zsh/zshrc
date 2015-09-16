@@ -7,8 +7,7 @@
 # Path
 typeset -U path
 
-path=(/opt/local/bin ~/bin/ ~/bin/git-remote-hg ~/bin/project-creator/
-~/.rvm/bin /opt/eclipse ~/bin/git-hg/bin $path)
+path=(/opt/local/bin /usr/local/autoconf/bin $path)
 
 # Zsh Function Path
 typeset -U fpath
@@ -78,11 +77,15 @@ source "$ZSH/func/extract/extract.zsh"
 # mkarchive
 source "$ZSH/func/mkarchive/mkarchive.zsh"
 
+# zsh syntax highlighter
+source "$ZSH/func/syntax-highlighting/zsh-syntax-highlighting.zsh"
+
 # key bindings
 source "$ZSH/zkeybindings"
 
 # alias
 source "$ZSH/zsh_aliases"
+
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

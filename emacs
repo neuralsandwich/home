@@ -4,16 +4,19 @@
 (setq sean-win32 (not (or sean-aquamacs sean-linux)))
 
 ;; Get rid of the tool bar
-(if window-system
-    (tool-bar-mode 0))
+(when (window-system)
+    (tool-bar-mode -1)
+    (scroll-bar-mode -1))
 (menu-bar-mode 0)
+
+;; Get rid of splash screen
+(setq inhibit-startup-message t
+inhibit-startup-echo-area-message t)
 
 ;; Automatically indent by 2
 (setq-default c-basic-offset 2)
-
-;; Clang format
-(load "/usr/share/emacs/site-lisp/clang-format-3.4/clang-format.el")
-(global-set-key (kbd "M-p") 'clang-format-buffer)
+;; Show column ruler at 80 columns
+(setq-default fci-rule-column 80)    
 
 ;; Set Editor style
 ;; Set colours
@@ -24,11 +27,42 @@
 (setq enable-local-variables nil)
 (setq sean-font "outline-DejaVu Sans Mono")
 
+;;Initalise the GNU Emacs Lisp Package Archive
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+;; Clang format
+(require 'clang-format)
+(global-set-key (kbd "M-p") 'clang-format-buffer)
+
+;; Load cmake mode
+(setq load-path (cons (expand-file-name "~/.emacs.d/lisp/") load-path))
+(require 'cmake-mode)
+
+;; Load auto-inserts
+;;(require 'auto-inserts)
+
 (load-library "view")
 (require 'cc-mode)
 (require 'ido)
 (require 'compile)
 (ido-mode t)
+
+;; Enable org mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;; Setup org files
+(setq org-agenda-files (list "~/org/work.org"
+                             "~/org/projects.org" 
+                             "~/org/home.org"))
 
 ;; Smooth scrolling
 (setq scroll-step 3)
@@ -37,7 +71,7 @@
 (display-time)
 
 ;; Bright red TODOS
-(setq fixme-modes '(c++-mode c-mode emacs-lisp-mode))
+(setq fixme-modes '(c++-mode c-mode emacs-lisp-mode cmake-mode))
 (make-face 'font-lock-fixme-face)
 (make-face 'font-lock-study-face)
 (make-face 'font-lock-important-face)
@@ -61,6 +95,4 @@
 
 (global-set-key (kbd "M-[") 'compile)
 
-(set-foreground-color "burlywood3")
-(set-background-color "#161616")
-(set-cursor-color "#40FF40")
+(load-theme 'manoj-dark)
