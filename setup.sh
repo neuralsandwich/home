@@ -13,7 +13,8 @@ readonly source_files=("${dotfile_path}/zsh/zshrc"
 		       "${dotfile_path}/bashrc"
 		       "${dotfile_path}/bash_profile"
 		       "${dotfile_path}/bash_alias"
-		       "${dotfile_path}/emacs")
+		       "${dotfile_path}/emacs"
+		       "${dotfile_path}/emacs.d")
 
 readonly target_files=("${HOME}/.zshrc"
 		       "${HOME}/.zshenv"
@@ -24,7 +25,8 @@ readonly target_files=("${HOME}/.zshrc"
 		       "${HOME}/.bashrc"
 		       "${HOME}/.bash_profile"
 		       "${HOME}/.bash_alias"
-		       "${HOME}/.emacs")
+		       "${HOME}/.emacs"
+		       "${HOME}/.emacs.d")
 
 dependency_check() {
     return 0

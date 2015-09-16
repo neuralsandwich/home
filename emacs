@@ -27,8 +27,18 @@ inhibit-startup-echo-area-message t)
 (setq enable-local-variables nil)
 (setq sean-font "outline-DejaVu Sans Mono")
 
+;;Initalise the GNU Emacs Lisp Package Archive
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+
 ;; Clang format
-(load "/usr/share/emacs/site-lisp/clang-format-3.4/clang-format.el")
+(require 'clang-format)
 (global-set-key (kbd "M-p") 'clang-format-buffer)
 
 ;; Load cmake mode
@@ -36,9 +46,7 @@ inhibit-startup-echo-area-message t)
 (require 'cmake-mode)
 
 ;; Load auto-inserts
-(add-to-list 'load-path "~/.emacs.d/lisp")
 (load-library "auto-inserts")
-
 
 (load-library "view")
 (require 'cc-mode)
@@ -88,8 +96,3 @@ inhibit-startup-echo-area-message t)
 
 (load-theme 'manoj-dark)
 
-;;Initalise the GNU Emacs Lisp Package Archive
-(package-initialize)
-(require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-(setq-default dotspacemacs-configuration-layers '(osx))
