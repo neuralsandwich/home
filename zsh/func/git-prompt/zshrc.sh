@@ -9,22 +9,22 @@ setopt PROMPT_SUBST
 
 __GIT_PROMPT_AVAILABLE="no"
 
-setup() {
-  local NoGitPrompt="git-prompt not found"
+git_prompt_available() {
+    return git-prompt 2&>1 /dev/nulls
+}
 
-  if [[ "${NoGitPrompt}" == $(which git-prompt) ]] ; then
-      source "${ZSH}/func/git-prompt/zshrc-gitstatus.sh"
-  else
-      __GIT_PROMPT_AVAILABLE="yes"
-  fi
+setup() {
+    if [[ git_prompt_available != 0 ]] ; then
+	source "${ZSH}/func/git-prompt/zshrc-gitstatus.sh"
+    else
+	__GIT_PROMPT_AVAILABLE="yes"
+    fi
 }
 
 git_prompt() {
-  
   if [[ ${__GIT_PROMPT_AVAILABLE} == "no" ]] ; then
       echo "$(git_super_status)"
   else
-
       prompt=`git-prompt \
   prefix '(' \
   suffix '%{\e[1;0m%})' \
