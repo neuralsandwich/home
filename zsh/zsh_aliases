@@ -2,6 +2,12 @@
 
 alias hometime='sudo shutdown -P -h now'
 
+## Bye bye Emacs
+alias emacs="echo Computer says 'No.'"
+
+## Hello Neovim
+alias vim=nvim
+
 ## Useful command aliases
 alias df='df -h'
 alias du='du -h -c'
@@ -17,8 +23,6 @@ alias lt='ls -ltr'
 alias ll='ls -l'
 alias lsd='ls -s | grep "^d"'
 alias reload='source $HOME/.zshenv && source $HOME/.zshrc'
-
-alias emacs="emacs -nw"
 
 # Git Aliases
 alias ga='git add'

@@ -1,19 +1,5 @@
 # NeuralSandwich's personalised .zshrc
 
-#############
-# Set Paths #
-#############
-
-# Path
-typeset -U path
-
-path=(/opt/local/bin /usr/local/autoconf/bin $path)
-
-# Zsh Function Path
-typeset -U fpath
-fpath=($ZSH/func "${fpath[@]}")
-fpath=($ZSH/func/battery/ "${fpath[@]}")
-
 ###############
 # Set Options #
 ###############

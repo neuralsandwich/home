@@ -1,5 +1,19 @@
 # neuralsandwich's zshenv
 
+#############
+# Set Paths #
+#############
+
+# Path
+typeset -U path
+path=(/usr/local/bin /opt/local/bin /usr/local/autoconf/bin $path[@])
+
+# Zsh Function Path
+typeset -U fpath
+fpath=($ZSH/func "${fpath[@]}")
+fpath=($ZSH/func/battery/ "${fpath[@]}")
+
+
 # Emacs key bindings
 bindkey -e
 
