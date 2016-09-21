@@ -227,3 +227,6 @@ alias dbx='cd ~/Dropbox && l'
 alias powerdown='sudo shutdown -P -h now'
 alias ubin='cd ~/.bin && l'
 alias reload='source ~/.zshrc'
+
+# Start tmux - Can't not be in tmux
+[[ $TERM != "screen" ]] && exec tmux
