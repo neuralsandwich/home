@@ -19,7 +19,7 @@
 [core]
     autocrlf = input
     editor = vim
-	excludesfile = /Users/neuralsandwich/.gitignore_global
+    excludesfile = /Users/neuralsandwich/.gitignore_global
     pager = less
 [push]
     default = current
@@ -52,6 +52,20 @@
     beginnings = log --reverse --date=short --pretty=format:'%C(blue)%h%C(reset) %C(green)%ad%C(reset) | %s %C(dim white)[%an]%C(reset)%C(yellow)%d%C(reset)'
     tags = tag -l
 [rerere]
-	enable = true
+    enable = true
+    enabled = true
 [diff]
-	tool = git-meld
+	tool = vimdiff
+[rebase]
+  autosquash = true
+
+# git-repo - Python tool settings
+[gitrepo "cogit"]
+  type = gitlab
+  token = emgZuEFRritzayKX3TdS
+  fqdn = git.office.codeplay.com
+[request]
+	url = http://git.office.codeplay.com
+	token = f5Cq7Yoy5xYisoVAsG8B
+[merge]
+	tool = vimdiff

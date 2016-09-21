@@ -11,7 +11,7 @@
 "   -> Files and backups
 "   -> Text, tab and indent
 "   -> Visual mode
-"   -> Nagivating tabs and buffers
+"   -> Navigating tabs and buffers
 "   -> Status line
 "   -> Editing mappings
 "   -> Vimgrep searching
@@ -265,7 +265,7 @@ map Y y$
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
-nnoremap <C-L> :nohl<CR><C-L>
+nnoremap <F8> :nohl<CR><C-L>
 
 " Make % visually highlighy - it is the most commom use case.
 noremap % v%
@@ -309,7 +309,16 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-fugitive'
+Plugin 'NeuralSandwich/vim-cabalist'
 
 call vundle#end()
 
 filetype plugin indent on
+
+"------------------------------------------------------------------------------
+" Enable Powerline
+"------------------------------------------------------------------------------
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
