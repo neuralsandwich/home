@@ -72,7 +72,11 @@ elif [[ $(uname) == "Linux"  ]] ; then
 		echo "∞"
 	    fi
 	}
-    fi
+      elif
+        battery_pct_remaining(){}
+        battery_time_remaining(){}
+        battery_pct_prompt(){}
+      fi
 else
     echo "$fg[red]acpi is not installed$reset_color"
 
