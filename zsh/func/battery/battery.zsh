@@ -72,7 +72,7 @@ elif [[ $(uname) == "Linux"  ]] ; then
 		echo "∞"
 	    fi
 	}
-      elif
+      else
         battery_pct_remaining(){}
         battery_time_remaining(){}
         battery_pct_prompt(){}
