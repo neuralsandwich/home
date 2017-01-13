@@ -69,3 +69,6 @@
 	token = f5Cq7Yoy5xYisoVAsG8B
 [merge]
 	tool = vimdiff
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
