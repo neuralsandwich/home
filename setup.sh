@@ -14,7 +14,8 @@ readonly source_files=("${dotfile_path}/zsh/zshrc"
 		       "${dotfile_path}/bash_profile"
 		       "${dotfile_path}/bash_alias"
 		       "${dotfile_path}/emacs"
-		       "${dotfile_path}/emacs.d")
+		       "${dotfile_path}/emacs.d"
+                       "${dotfile_path}/tmux.cong")
 
 readonly target_files=("${HOME}/.zshrc"
 		       "${HOME}/.zshenv"
@@ -26,7 +27,8 @@ readonly target_files=("${HOME}/.zshrc"
 		       "${HOME}/.bash_profile"
 		       "${HOME}/.bash_alias"
 		       "${HOME}/.emacs"
-		       "${HOME}/.emacs.d")
+		       "${HOME}/.emacs.d"
+                       "${HOME}/.tmux.conf")
 
 dependency_check() {
     return 0
