@@ -12,6 +12,7 @@ path=(/usr/local/bin /opt/local/bin /usr/local/autoconf/bin $path[@])
 typeset -U fpath
 fpath=($ZSH/func "${fpath[@]}")
 fpath=($ZSH/func/battery/ "${fpath[@]}")
+fpath=(/usr/share/zsh/site-function "${fpath[@]}")
 
 # vim key bindings
 bindkey -v
@@ -30,6 +31,7 @@ export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
 export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST=10000
+bindkey '^R' history-incremental-search-backward
 
 # GPG key
 export GPGKEY="8A6C3D34"

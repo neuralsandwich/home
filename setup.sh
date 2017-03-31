@@ -15,7 +15,7 @@ readonly source_files=("${dotfile_path}/zsh/zshrc"
 		       "${dotfile_path}/bash_alias"
 		       "${dotfile_path}/emacs"
 		       "${dotfile_path}/emacs.d"
-                       "${dotfile_path}/tmux.cong")
+                       "${dotfile_path}/tmux.conf")
 
 readonly target_files=("${HOME}/.zshrc"
 		       "${HOME}/.zshenv"
