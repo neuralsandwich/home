@@ -30,7 +30,7 @@ key[PageDown]=${terminfo[knp]}
 # Better history searching
 [[ -n "${key[PageUp]}" ]] && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]] && bindkey  "${key[PageDown]}"  history-beginning-search-forward
-
+bindkey '^R' history-incremental-pattern-search-backward
 
 ## http://wiki.pontus.cee.carleton.ca/index.php/Zsh#Using_VIM_mode.2C_but_still_having_CTRL-A_and_CTRL-E
 ## Fix ctrl-a ctrl-e in vi mode

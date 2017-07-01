@@ -6,7 +6,7 @@
 
 # Path
 typeset -U path
-path=(/usr/local/bin /opt/local/bin /usr/local/autoconf/bin $path[@])
+path=(/usr/local/bin /opt/local/bin /usr/local/opt/go/libexec/bin $path[@])
 
 # Zsh Function Path
 typeset -U fpath
@@ -14,8 +14,8 @@ fpath=($ZSH/func "${fpath[@]}")
 fpath=($ZSH/func/battery/ "${fpath[@]}")
 fpath=(/usr/share/zsh/site-function "${fpath[@]}")
 
-# vim key bindings
-bindkey -v
+# emacs key bindings. This is similar to how bash funtions
+bindkey -e
 
 # Dot File Localtions
 ZSH="$HOME/.zsh"
