@@ -159,3 +159,6 @@ fi
 
 CCACHE_DIR=$HOME/dev/.ccache
 PATH=/usr/lib/ccache:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# added by travis gem
+[ -f /home/neuralsandwich/.travis/travis.sh ] && source /home/neuralsandwich/.travis/travis.sh

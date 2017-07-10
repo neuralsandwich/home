@@ -176,11 +176,6 @@ set si
 " Wrap lines
 set wrap
 
-" Stop certain movements from always going to the first character of a line.
-" While this behaviour deviates from that of Vi, it does what most users
-" coming from other editors would expect.
-set nostartofline
-
 " remove trailing white space
 autocmd FileType c,cpp,java,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
@@ -195,9 +190,6 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
 
 " Map <space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -205,12 +197,6 @@ map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -222,7 +208,7 @@ map <leader>ba: 1,1000 bd!<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
+map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
 
 " Opens a new tab with the current buffer's path
@@ -272,7 +258,7 @@ noremap % v%
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
- 
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 set list
@@ -293,7 +279,7 @@ nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 let g:fmtv_clang_format_py = '/usr/local/Cellar/llvm/3.9.0/share/clang/clang-format.py'
 
-map <C-k>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+map <C-K>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
 imap <C-K> <c-o>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
 
 "------------------------------------------------------------
@@ -311,6 +297,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
 
 "------------------------------------------------------------
 " Enable plugins
@@ -343,6 +332,6 @@ filetype plugin indent on
 " Enable Powerline
 "------------------------------------------------------------------------------
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
