@@ -84,8 +84,7 @@ set whichwrap+=<,>,h,l
 set ignorecase
 set smartcase
 
-" Highlight searches (use <C-L> to temporarily turn off highlighting; see the
-" mapping of <C-L> below)
+" Highlight searches 
 set hlsearch
 
 " Make search act like search in modern browsers
@@ -160,9 +159,10 @@ set nowb
 
 " Indentation settings for using 4 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
 
 " Be smart when using tabs
 set smarttab
@@ -279,13 +279,12 @@ nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 let g:fmtv_clang_format_py = '/usr/local/Cellar/llvm/3.9.0/share/clang/clang-format.py'
 
-map <C-K>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
-imap <C-K> <c-o>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+map <F4>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
 
 "------------------------------------------------------------
 " Omnicppcomplete ctag binding
 map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
+kk
 "------------------------------------------------------------
 " Disable Arrow keys
 noremap <Up> <NOP>
@@ -314,15 +313,16 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'sjl/gundo.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-obsession'
 Plugin 'frasercrmck/formative.vim'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 
