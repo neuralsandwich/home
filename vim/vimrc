@@ -324,3 +324,13 @@ filetype plugin indent on
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+
+"------------------------------------------------------------------------------
+" Vim Formative key bindings
+"------------------------------------------------------------------------------
+
+let g:fmtv_clang_format_nor_key  = '<C-Space>'
+let g:fmtv_clang_format_vis_key  = '<C-Space>'
+let g:fmtv_clang_format_ins_key  = '<C-Space>'
+let g:fmtv_clang_format_line_key = '<C-Space>'
+let g:fmtv_clang_format_file_key = '<C-Space>'
