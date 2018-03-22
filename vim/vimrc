@@ -45,7 +45,7 @@ set nocompatible
 " VIM UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Move content when cursor is 7 lines while vertically scrolling
-set so=7
+set scrolloff=7
 
 " Better command-line completion
 set wildmenu
@@ -53,7 +53,7 @@ set wildmode=full
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
+if has('win16') || has('win32')
   set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 else
   set wildignore+=.git\*,.hg\*,.svn\*
@@ -107,7 +107,7 @@ set visualbell
 " Stop annoying sounds
 set noerrorbells
 set t_vb=
-set tm=500
+set timeoutlen=500
 
 " Add a bit extra margin to the left
 set foldcolumn=1
@@ -132,7 +132,7 @@ syntax on
 set background=dark
 
 " set extra option when running in GUI mode
-if has ("gui_running")
+if has ('gui_running')
   set guioptions-=T
   set guioptions-=e
   set t_Co=256
@@ -143,14 +143,14 @@ endif
 set encoding=utf8
 
 " Use Unix as the standard file type
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn off backups
 set nobackup
-set nowb
+set nowritebackup
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text, tab and indent related
@@ -168,10 +168,10 @@ set expandtab
 set smarttab
 
 " Auto indent
-set ai
+set autoindent
 
 " Smart indent
-set si
+set smartindent
 
 " Wrap lines
 set wrap
@@ -238,8 +238,6 @@ set pastetoggle=<F11>
 set textwidth=80
 set colorcolumn=80
 
-set nocp
-
 "------------------------------------------------------------
 " Mappings
 "
@@ -301,11 +299,10 @@ set splitright
 "------------------------------------------------------------
 " Enable plugins
 
-set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
