@@ -49,7 +49,7 @@ source "$ZSH/func/battery/battery.zsh"
 source "$ZSH/func/git-prompt/zshrc.sh"
 
 # Weclome
-source "$ZSH/func/welcome/welcome.zsh"
+#source "$ZSH/func/welcome/welcome.zsh"
 
 # SSH Agent
 source "$DOTFILES/ssh-agent/ssh-agent.sh"

@@ -277,9 +277,7 @@ endfunction
 
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
-let g:fmtv_clang_format_py = '/usr/local/Cellar/llvm/3.9.0/share/clang/clang-format.py'
-
-map <F4>:pyf /Users/neuralsandwich/Dev/llvm/tools/clang/tools/clang-format/clang-format.py<cr>
+let g:fmtv_clang_format_py = '~/.vim/clang-format.py'
 
 "------------------------------------------------------------
 " Omnicppcomplete ctag binding
@@ -313,16 +311,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-obsession'
 Plugin 'frasercrmck/formative.vim'
 Plugin 'w0rp/ale'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
