@@ -296,27 +296,6 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-"------------------------------------------------------------
-" Enable plugins
-
-filetype off
-
-" set the runtime path to include Vundle and initialize
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'frasercrmck/formative.vim'
-Plugin 'w0rp/ale'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'Valloric/YouCompleteMe'
-
-call vundle#end()
-
-filetype plugin indent on
-
 "------------------------------------------------------------------------------
 " Enable Powerline
 "------------------------------------------------------------------------------
@@ -334,3 +313,15 @@ let g:fmtv_clang_format_vis_key  = '<C-Space>'
 let g:fmtv_clang_format_ins_key  = '<C-Space>'
 let g:fmtv_clang_format_line_key = '<C-Space>'
 let g:fmtv_clang_format_file_key = '<C-Space>'
+
+" YouCompleteMe
+"------------------------------------------------------------------------------
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_ycm_extra_conf'
+
+"-------------------------------------------------------------------------------
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
