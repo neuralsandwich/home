@@ -71,3 +71,6 @@ stetic*
 xbuild*
 vlc
 vim/bundle/*
+
+# Local files
+mutt/passwords.pgp

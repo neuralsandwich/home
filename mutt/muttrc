@@ -1,0 +1,9 @@
+# muttrc
+# references:
+# * [^1]: https://gist.github.com/bnagy/8914f712f689cc01c267
+# * [^2]: https://pthree.org/2012/01/07/encrypted-mutt-imap-smtp-passwords/
+set folder="imaps://imap.gmail.com:993"
+
+set imap_user = 'neuralsandwich@gmail.com'
+# [Load password settings from local encrypted file][^2]
+source "gpg -d ~/.mutt/local/passwords.gpg |"

@@ -10,3 +10,6 @@
 [submodule "vim/pack/git-plugins/start/vim-tmux-navigator"]
 	path = vim/pack/git-plugins/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "tfenv/tfenv"]
+	path = tfenv/tfenv
+	url = https://github.com/kamatama41/tfenv.git
