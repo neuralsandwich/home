@@ -19,7 +19,7 @@
 [core]
     autocrlf = input
     editor = vim
-    excludesfile = /Users/neuralsandwich/.gitignore_global
+    excludesfile = ~/.gitignore
     pager = less
 [push]
     default = current

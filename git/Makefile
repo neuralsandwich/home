@@ -1,5 +1,5 @@
 MAKEFILE_DIR = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-FILES = gitconfig
+FILES = gitconfig gitignore
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
 INSTALL_PREFIX = "$(HOME)/."
 
