@@ -1,14 +1,14 @@
-[submodule "vim/pack/git-plugins/start/ale"]
-	path = vim/pack/git-plugins/start/ale
+[submodule "vim/vim/pack/git-plugins/start/ale"]
+	path = vim/vim/pack/git-plugins/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "vim/pack/git-plugins/start/YouCompleteMe"]
-	path = vim/pack/git-plugins/start/YouCompleteMe
+[submodule "vim/vim/pack/git-plugins/start/YouCompleteMe"]
+	path = vim/vim/pack/git-plugins/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "vim/pack/git-plugins/start/formative.vim"]
-	path = vim/pack/git-plugins/start/formative.vim
+[submodule "vim/vim/pack/git-plugins/start/formative.vim"]
+	path = vim/vim/pack/git-plugins/start/formative.vim
 	url = https://github.com/frasercrmck/formative.vim.git
-[submodule "vim/pack/git-plugins/start/vim-tmux-navigator"]
-	path = vim/pack/git-plugins/start/vim-tmux-navigator
+[submodule "vim/vim/pack/git-plugins/start/vim-tmux-navigator"]
+	path = vim/vim/pack/git-plugins/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "tfenv/tfenv"]
 	path = tfenv/tfenv
