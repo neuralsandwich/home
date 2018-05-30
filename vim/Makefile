@@ -10,5 +10,5 @@ install:
 
 .PHONY: uninstall
 uninstall:
-	@echo [UNINSTALL] vim configuration
+	@echo [UNINSTALL] Vim configuration
 	$(MAKEFILE_DIR)/install.sh -r

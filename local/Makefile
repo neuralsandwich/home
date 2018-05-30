@@ -1,5 +1,5 @@
 MAKEFILE_DIR = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-FILES := $(shell find $(LOCAL_DIR) -maxdepth 1 -mindepth 1 -type d -not -name ".*")
+FILES := 
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
 INSTALL_PREFIX = "$(HOME)/."
 

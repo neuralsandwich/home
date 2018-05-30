@@ -6,10 +6,10 @@ INSTALL_PREFIX = "$(HOME)/."
 
 .PHONY: install
 install:
-	@echo [INSTALL] Mutt configuration
+	@echo [INSTALL] SSH configuration
 	$(DOT_DIR)install.sh -p $(INSTALL_PREFIX) $(FILE_ARGUMENTS)
 
 .PHONY: uninstall
 uninstall:
-	@echo [UNINSTALL] Mutt configuration
+	@echo [UNINSTALL] SSH configuration
 	$(MAKEFILE_DIR)/install.sh -r

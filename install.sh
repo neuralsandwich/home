@@ -39,7 +39,7 @@ install() {
         local prefix=$1
         local file=$2
         $(test $file \
-                && ln -sf $(readlink -f $file) $prefix$file) \
+                && ln -sf $(realpath $file) $prefix$file) \
                 || abort "'$file' does not exist, cannot install"
 }
 
