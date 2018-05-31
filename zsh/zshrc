@@ -52,7 +52,7 @@ source "$ZSH/func/git-prompt/zshrc.sh"
 #source "$ZSH/func/welcome/welcome.zsh"
 
 # SSH Agent
-source "$DOTFILES/ssh-agent/ssh-agent.sh"
+source "$HOME/.ssh-agent/ssh-agent.sh"
 
 # ssh_client
 source "$ZSH/func/ssh_client/ssh_client.zsh"
