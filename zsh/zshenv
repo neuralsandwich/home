@@ -8,14 +8,22 @@
 typeset -U path
 path=(/usr/local/bin /opt/local/bin /usr/local/opt/go/libexec/bin $path[@])
 
+## Application Path Additions
+# tfenv
+path=("$HOME/.tfenv/bin" $path[@])
+
+# Go
+path=("$HOME/.go/bin" $path[@])
+path=("$HOME/go/bin" $path[@])
+
 # Zsh Function Path
 typeset -U fpath
 fpath=($ZSH/func "${fpath[@]}")
 fpath=($ZSH/func/battery/ "${fpath[@]}")
 fpath=(/usr/share/zsh/site-function "${fpath[@]}")
 
-# emacs key bindings. This is similar to how bash funtions
-bindkey -e
+# Vim key bindings
+bindkey -v
 
 # Dot File Localtions
 ZSH="$HOME/.zsh"
@@ -42,3 +50,10 @@ export DEBEMAIL="neuralsandwich@gmail.com"
 
 # Ccache Options
 export CCACHE_DIR="$HOME/dev/.ccache"
+
+# Application Environment Variables
+export GOPATH=$HOME/go
+
+# Local Config
+# Sourced last as it needs to override
+source "$DOTFILES/local/zshenv"
