@@ -3,8 +3,14 @@ FILES = tmux.conf
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
 INSTALL_PREFIX = "$(HOME)/."
 
+.PHONY: tmux
+tmux: /usr/bin/tmux
+
+/usr/bin/tmux:
+	@sudo apt-get install -y tmux
+
 .PHONY: install
-install:
+install: tmux
 	@echo [INSTALL] TMux configuration
 	$(DOT_DIR)install.sh -p $(INSTALL_PREFIX) $(FILE_ARGUMENTS)
 
