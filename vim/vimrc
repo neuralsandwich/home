@@ -177,8 +177,10 @@ set smartindent
 set wrap
 
 " remove trailing white space
-autocmd FileType c,cpp,java,python autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,java,python,go autocmd BufWritePre <buffer> :%s/\s\+$//e
 
+" go likes tabs
+autocmd Filetype go setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual mode related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

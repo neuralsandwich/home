@@ -73,5 +73,5 @@ python3-dev:
 $(YCM_INSTALL).d: \
 	submodules cmake build-essential $(CLANG_DEBS) ninja python-headers
 	@echo [INSTALL] Vim: Install YouCompleteMe
-	$(YCM_INSTALL) --clang-completer --clang-tidy
+	$(YCM_INSTALL) --clang-completer --clang-tidy --go-completer
 	@touch $(YCM_INSTALL).d
