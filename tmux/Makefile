@@ -3,11 +3,23 @@ FILES = tmux.conf
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
 INSTALL_PREFIX = "$(HOME)/."
 
-.PHONY: tmux
-tmux: /usr/bin/tmux
+ifeq ($(UNAME_S),Linux)
+	PKG_INSTALL = sudo apt-get install -y
+	PKG_CHECK := "| xargs dpkg -s '{}' > /dev/null"
+	TMUX = /usr/bin/tmux
+endif
+ifeq ($(UNAME_S),Darwin)
+	PKG_INSTALL = brew cask install
+	PKG_CHECK := "| xargs brew cask ls --versions"
+	TMUX = /usr/local/bin/tmux
+endif
 
-/usr/bin/tmux:
-	@sudo apt-get install -y tmux
+.PHONY: tmux
+tmux: $(TMUX)
+
+$(TMUX):
+	@echo tmux $(PKG_CHECK) \
+		echo tmux $(PKG_INSTALL)
 
 .PHONY: install
 install: tmux
