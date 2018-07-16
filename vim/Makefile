@@ -3,10 +3,21 @@ FILES = vim vimrc
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
 INSTALL_PREFIX = "$(HOME)/."
 
-LIBCLANG = libclang1-5.0
 CLANG_TIDY = clang-tidy
 CLANG_DEBS := $(CLANG_TIDY) $(LIBCLANG)
 YCM_INSTALL = vim/pack/git-plugins/start/YouCompleteMe/install.py
+
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	LIBCLANG = libclang1-5.0
+	PKG_INSTALL = sudo apt-get install -y
+	PKG_CHECK := "| xargs dpkg -s '{}' > /dev/null"
+	PYTHON_HEADERS = python-dev python3-de
+endif
+ifeq ($(UNAME_S),Darwin)
+	PKG_INSTALL = brew install
+	PKG_CHECK := "| xargs brew ls --versions"
+endif
 
 .PHONY: all
 all: install submodules $(YCM_INSTALL).d
@@ -31,7 +42,8 @@ cmake: /usr/bin/cmake
 	@echo [INSTALL] Vim: Install CMake
 
 /usr/bin/cmake:
-	sudo apt-get install cmake
+	echo cmake $(PKG_CHECK) \
+		|| $(PKG_INSTALL) cmake
 
 .PHONY: libclang
 libclang: $(LIBCLANG)
@@ -41,24 +53,25 @@ libclang: $(LIBCLANG)
 $(CLANG_DEBS): $(LIBCLANG) $(CLANG_TIDY)
 
 $(LIBCLANG):
-	@dpkg -s $(CLANG_DEBS) > /dev/null || sudo apt-get install $(LIBCLANG)
+	@echo $(CLANG_DEBS) $(PKG_CHECK) \
+		|| echo $(LIBCLANG) $(PKG_INSTALL)
 
 $(CLANG_TIDY):
-	@dpkg -s $(CLANG_TIDY) > /dev/null \
-		|| sudo apt-get install -y $(CLANG_TIDY)
+	@echo $(CLANG_TIDY) $(PKG_CHECK) \
+		|| echo $(CLANG_TIDY) $(PKG_INSTALL)
 
 .PHONY: build-essential
 build-essential:
-	@dpkg -s build-essential > /dev/null \
-		|| sudo apt-get install build-essential
+	@echo build-essential $(PKG_CHECK) \
+		|| echo build-essential $(PKG_INSTALL)
 
 .PHONY: ninja
 ninja:
-	@dpkg -s ninja-build > /dev/null \
-		|| sudo apt-get install ninja-build
+	@echo ninja $(PKG_CHECK) \
+		|| echo ninja $(PKG_INSTALL)
 
 .PHONY: python-headers
-python-headers: python-dev python3-dev
+python-headers: $(PYTHON_HEADERS)
 
 .PHONY: python-dev
 python-dev:
