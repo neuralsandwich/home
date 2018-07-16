@@ -1,6 +1,6 @@
 TARGET_PREFIX = $(HOME)/.ssh/
 MAKEFILE_DIR = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-FILES = ssh_config ssh-agent
+FILES = ssh_config
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
 INSTALL_PREFIX = "$(HOME)/."
 
