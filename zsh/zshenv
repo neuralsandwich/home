@@ -13,7 +13,9 @@ path=(/usr/local/bin /opt/local/bin /usr/local/opt/go/libexec/bin $path[@])
 path=("$HOME/.tfenv/bin" $path[@])
 
 # Go
+# Actual Go
 path=("$HOME/.go/bin" $path[@])
+# Things built by go
 path=("$HOME/go/bin" $path[@])
 
 # Zsh Function Path
@@ -21,6 +23,11 @@ typeset -U fpath
 fpath=($ZSH/func "${fpath[@]}")
 fpath=($ZSH/func/battery/ "${fpath[@]}")
 fpath=(/usr/share/zsh/site-function "${fpath[@]}")
+
+# Helper Functions
+_has() {
+    which $1>/dev/null 2>&1
+}
 
 # Vim key bindings
 bindkey -v
@@ -42,7 +49,15 @@ export SAVEHIST=10000
 bindkey '^R' history-incremental-search-backward
 
 # GPG key
-export GPGKEY="8A6C3D34"
+export GPGKEY="EE62340D"
+
+# GPG Agent
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+if _has gpg-agent; then
+        eval "$(gpgconf --launch gpg-agent)"
+        echo UPDATESTARTUPTTY | gpg-connect-agent 1>/dev/null
+fi
 
 # Debian package information
 export DEBFULLNAME="Sean Jones"
