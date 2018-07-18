@@ -51,9 +51,6 @@ source "$ZSH/func/git-prompt/zshrc.sh"
 # Weclome
 #source "$ZSH/func/welcome/welcome.zsh"
 
-# SSH Agent
-source "$HOME/.ssh-agent/ssh-agent.sh"
-
 # ssh_client
 source "$ZSH/func/ssh_client/ssh_client.zsh"
 
