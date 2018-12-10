@@ -8,6 +8,7 @@
 # Start-up items
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=secrets
 
 # i3 config file (v4)
 #
@@ -29,7 +30,7 @@ font pango:Hack 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec rxvt-unicode
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -64,6 +65,9 @@ bindsym $mod+f fullscreen
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
+bindsym $mod+$ms+h layout splith
+bindsym $mod+$ms+v layout splitv
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -110,6 +114,15 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Lock screen
 bindsym $mod+$ms+l exec i3lock -c 1A2A2A
+
+# Laptop Mode
+bindsym $mod+$ms+0 exec "xrandr --output HDMI-1-2 --off --output eDP-1-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1-1 --off --output DP-1-1 --off --output DP-1-2 --off"
+
+# Work Mode
+bindsym $mod+$ms+1 exec "xrandr --output HDMI-1-2 --off --output eDP-1-1 --off --output HDMI-1-1 --mode 1920x1080 --pos 0x432 --rotate normal --output DP-1-1 --off --output DP-1-2 --mode 1920x1080 --pos 1920x0 --rotate left && i3-msg 'workspace 1, move workspace to output HDMI-1-1' && i3-msg 'workspace 2, move workspace to output DP-1-2'"
+
+# Home Mode
+bindsym $mod+$ms+2 exec "xrandr --output HDMI-1-2 --off --output eDP-1-1 --off --output HDMI-1-1 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-1-1 --off --output DP-1-2 --mode 1920x1080 --pos 0x0 --rotate normal && i3-msg 'workspace 1, move workspace to output DP-1-2' && i3-msg 'workspace 2, move workspace to output HDMI-1-1'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
