@@ -30,12 +30,14 @@ URxvt.color15:  #FDF6E3
 
 ! Transparency
 ! Real - Compiz
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
+
+URxvt.background: rgba:0000/0000/0200/c800
 
 ! Fake - X hack
-urxvt*transparent: true
-urxvt*shading: 20
+URxvt.transparent: true
+URxvt.shading:     20
+URxvt.depth:       32
+
 
 ! Font settings
 Xft*antialias:          1
@@ -47,11 +49,12 @@ Xft*.lcdfilter:         lcddefault
 URxvt*font:             xft:Hack:pixelsize=12
 URxvt*boldFont:         xft:Hack:bold:pixelsize=12
 
-! URL selection
-URxvt.perl-ext-common:          default,matcher
-URxvt.urlLauncher:              firefox
+! URI selection
+URxvt.perl-ext-common:          default,matcher,resize-font
 URxvt.matcher.button:           1
-URxvt.url-select.underline:     true
+
+URxvt.matcher.matcher.0:        \\b(http|https|ftp):\/\/[\\w\\-\\@;\\/?:&=%\\$.+!*\x27,~#]+
+URxvt.matcher.launcher.0:       chromium-browser
 
 ! Scroll
 ! jump scrolling
@@ -91,3 +94,6 @@ URxvt*externalBorder:     0
 URxvt*internalBorder:     2
 ! remove border
 URxvt*borderLess: false
+
+
+Xcursor.size: 16
