@@ -2,8 +2,41 @@
 # references:
 # * [^1]: https://gist.github.com/bnagy/8914f712f689cc01c267
 # * [^2]: https://pthree.org/2012/01/07/encrypted-mutt-imap-smtp-passwords/
-set folder="imaps://imap.gmail.com:993"
 
-set imap_user = 'neuralsandwich@gmail.com'
+set smtp_url="smtp://five.ai@smtp.gmail.com:587/"
+set from="sean.jonse@five.ai"
+set folder="imaps://imap.gmail.com:993"
+set spoolfile="+INBOX"
+set postponed="+[Gmail]/Drafts"
+
 # [Load password settings from local encrypted file][^2]
 source "gpg -d ~/.mutt/local/passwords.gpg |"
+
+set editor="vim +13 -c 'set nobackup' -c 'set noswapfile' -c 'set nowritebackup' -c 'set tw=72 ft=mail noautoindent'"
+
+# SSL hardening
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set ssl_use_sslv3=no
+set ssl_use_tlsv1=no
+set ssl_use_tlsv1_1=no
+set ssl_use_tlsv1_2=yes
+set ssl_verify_dates=yes
+set ssl_verify_host=yes
+
+set certificate_file=~/.mutt/gmailcerts
+
+set pgp_sign_as=EE62340D
+# Encrypt replies to PGP mails by default
+set pgp_replyencrypt=yes
+# Set this to something comfortable
+set pgp_timeout=1800
+
+# Gmail-style keyboard shortcuts
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index gt "<change-folder>=[Gmail]/Trash<enter>" "Go to trash"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive"

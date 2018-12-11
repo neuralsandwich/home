@@ -12,7 +12,7 @@ ifeq ($(UNAME_S),Linux)
 	LIBCLANG = libclang1-5.0
 	PKG_INSTALL = sudo apt-get install -y
 	PKG_CHECK := "| xargs dpkg -s '{}' > /dev/null"
-	PYTHON_HEADERS = python-dev python3-de
+	PYTHON_HEADERS = python-dev python3-dev
 endif
 ifeq ($(UNAME_S),Darwin)
 	PKG_INSTALL = brew install
@@ -86,5 +86,6 @@ python3-dev:
 $(YCM_INSTALL).d: \
 	submodules cmake build-essential $(CLANG_DEBS) ninja python-headers
 	@echo [INSTALL] Vim: Install YouCompleteMe
-	$(YCM_INSTALL) --clang-completer --clang-tidy --go-completer
+	pip3 install jedi
+	python3 $(YCM_INSTALL) --clang-completer --clang-tidy --go-completer
 	@touch $(YCM_INSTALL).d

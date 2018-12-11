@@ -320,6 +320,9 @@ let g:fmtv_clang_format_file_key = '<C-Space>'
 "------------------------------------------------------------------------------
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_ycm_extra_conf'
 
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 "-------------------------------------------------------------------------------
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
