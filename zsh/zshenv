@@ -6,10 +6,41 @@
 
 # Path
 typeset -U path
-path=(/usr/local/bin /opt/local/bin /usr/local/opt/go/libexec/bin $path[@])
+path=(/usr/local/bin /opt/local/bin $path[@])
 
-## Application Path Additions
+#-------------------------------------------------------------------------------
+# Go env
+#-------------------------------------------------------------------------------
+export GOENV_ROOT="${HOME}/.goenv"
+path=($GOENV_ROOT/bin $path[@])
+path=($GOENV_ROOT/shims $path[@])
+
+export GOENV_SHELL=zsh
+source "${GOENV_ROOT}/libexec/../completions/goenv.zsh"
+
+command goenv rehash 2>/dev/null
+goenv() {
+  local command
+  command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(goenv "sh-$command" "$@")";;
+  *)
+    command goenv "$command" "$@";;
+  esac
+}
+goenv rehash --only-manage-paths
+
+path=($GOROOT/bin $path[@])
+path=($path[@] $GOPATH/bin)
+
+#-------------------------------------------------------------------------------
 # tfenv
+#-------------------------------------------------------------------------------
 path=("$HOME/.tfenv/bin" $path[@])
 
 # Go

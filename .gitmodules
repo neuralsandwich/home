@@ -13,3 +13,6 @@
 [submodule "tfenv/tfenv"]
 	path = tfenv/tfenv
 	url = https://github.com/kamatama41/tfenv.git
+[submodule "vim/vim/pack/git-plugins/start/vim-easy-align"]
+	path = vim/vim/pack/git-plugins/start/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git

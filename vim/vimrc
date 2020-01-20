@@ -316,6 +316,18 @@ let g:fmtv_clang_format_ins_key  = '<C-Space>'
 let g:fmtv_clang_format_line_key = '<C-Space>'
 let g:fmtv_clang_format_file_key = '<C-Space>'
 
+"------------------------------------------------------------------------------
+" Vim Formative key bindings
+"------------------------------------------------------------------------------
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
 " YouCompleteMe
 "------------------------------------------------------------------------------
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_ycm_extra_conf'
