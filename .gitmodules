@@ -16,3 +16,6 @@
 [submodule "vim/vim/pack/git-plugins/start/vim-easy-align"]
 	path = vim/vim/pack/git-plugins/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "vim/vim/pack/git-plugins/start/rainbow"]
+	path = vim/vim/pack/git-plugins/start/rainbow
+	url = https://github.com/luochen1990/rainbow.git
