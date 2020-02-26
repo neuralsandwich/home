@@ -9,10 +9,18 @@ YCM_INSTALL = vim/pack/git-plugins/start/YouCompleteMe/install.py
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
+OSRELEASE := $(shell lsb_release -i | sed -e 's/Distributor\ ID\:\s//g')
+ifeq ($(OSRELEASE),ManjaroLinux)
+	LIBCLANG = libclang1-5.0
+	PKG_INSTALL = sudo pacman -Sy
+	PKG_CHECK := "| xargs pacman -Qi '{}' > /dev/null"
+	PYTHON_HEADERS = python
+else
 	LIBCLANG = libclang1-5.0
 	PKG_INSTALL = sudo apt-get install -y
 	PKG_CHECK := "| xargs dpkg -s '{}' > /dev/null"
 	PYTHON_HEADERS = python-dev python3-dev
+endif
 endif
 ifeq ($(UNAME_S),Darwin)
 	PKG_INSTALL = brew install
@@ -71,7 +79,11 @@ ninja:
 		|| echo ninja $(PKG_INSTALL)
 
 .PHONY: python-headers
-python-headers: $(PYTHON_HEADERS)
+python-headers: install-$(PYTHON_HEADERS)
+
+install-$(PYTHON_HEADERS):
+	@echo build-essential $(PKG_CHECK) \
+		|| echo build-essential $(PKG_INSTALL)
 
 .PHONY: python-dev
 python-dev:
@@ -86,6 +98,6 @@ python3-dev:
 $(YCM_INSTALL).d: \
 	submodules cmake build-essential $(CLANG_DEBS) ninja python-headers
 	@echo [INSTALL] Vim: Install YouCompleteMe
-	pip3 install jedi
+	pip3 install --user jedi
 	python3 $(YCM_INSTALL) --clang-completer --clang-tidy --go-completer
 	@touch $(YCM_INSTALL).d
