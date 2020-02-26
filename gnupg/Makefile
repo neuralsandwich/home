@@ -1,7 +1,7 @@
 MAKEFILE_DIR = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-FILES = gpg-agent.conf
+FILES = gpg.conf gpg-agent.conf
 FILE_ARGUMENTS := $(addprefix -l, $(FILES))
-INSTALL_PREFIX = "$(HOME)/.gnupg"
+INSTALL_PREFIX = "$(HOME)/.gnupg/"
 
 .PHONY: install
 install:
