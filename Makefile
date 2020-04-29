@@ -5,19 +5,19 @@ CONFIGS_DS := $(shell find . -maxdepth 1 -mindepth 1 -type d -not -name ".*")
 CONFIGS := $(subst ./,, $(CONFIGS_DS))
 UTILITIES_MK := $(abspath $(DOT_DIR)/utilities.mk)
 .PHONY: all
-all: _start install
+all: _start link
 
-.PHONY: install $(addprefix install_,$(CONFIGS))
-install : $(addprefix install_,$(CONFIGS))
-	@echo [INSTALL] All dotfiles installed
+.PHONY: link $(addprefix link_,$(CONFIGS))
+link: $(addprefix link_,$(CONFIGS))
+	@echo [LINK] Linked dotfiles
 
-.PHONY: uninstall $(addprefix uninstall_,$(CONFIGS))
-uninstall : $(addprefix uninstall_,$(CONFIGS))
-	@echo [UNINSTALL] Uninstalled dotfiles
+.PHONY: unlink $(addprefix unlink_,$(CONFIGS))
+unlink : $(addprefix unlink_,$(CONFIGS))
+	@echo [UNLINK] Unlinked dotfiles
 
 _start:
 	@echo "################################"
-	@echo Installing dotfiles
+	@echo Linking dotfiles
 	@echo "################################"
 
 define CONFIGS_template
@@ -26,11 +26,11 @@ TARGET_$(1) := $(addprefix $(HOME)/., $(1))
 $$(TARGET_$(1)): $(1)
 	@$(MAKE) -C $(1)
 
-install_$(1): $$(TARGET_$(1))
+link_$(1): $$(TARGET_$(1))
 
-.PHONY: uninstall_$(1)
-uninstall_$(1):
-	@$(MAKE) -C $(1) uninstall
+.PHONY: unlink_$(1)
+unlink_$(1):
+	@$(MAKE) -C $(1) unlink
 endef
 
 $(foreach config,$(CONFIGS),$(eval $(call CONFIGS_template,$(config))))

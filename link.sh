@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-PREFIX=""
+set -euxo pipefail
+
 FILES=()
+MODE="link"
+PREFIX=""
 
 abort() {
         local message=$1
@@ -20,7 +23,7 @@ parse_args() {
                                 PREFIX=$OPTARG
                                 ;;
                         r)
-                                abort "TODO: uninstall"
+                                MODE="unlink"
                                 ;;
                         \?)
                                 abort "Invalid option: -$OPTARG"
@@ -35,18 +38,40 @@ parse_args() {
         fi
 }
 
-install() {
+link() {
         local prefix=$1
         local file=$2
-        $(test $file \
-                && ln -sf $(realpath $file) $prefix$file) \
-                || abort "'$file' does not exist, cannot install"
+
+
+        # Move any existing files to a backup file
+        if [ -f ${prefix}${file} ] && [ ! -L ${prefix}${file} ] ; then
+                mv "${prefix}${file}" "${prefix}${file}.old"
+        fi
+
+        # Link our dotfile
+        if [ -f $file ] ; then
+                ln -sf $(realpath $file) "${prefix}${file}"
+        else
+                abort "'${file}' does not exist, cannot install"
+        fi
+}
+
+unlink() {
+        local prefix=$1
+        local file=$2
+
+        # Move any existing files to a backup file
+        if [ -L ${prefix}${file} ] ; then
+                rm "${prefix}${file}"
+        else
+                abort "'${prefix}${file}' does not exist, cannot unlink"
+        fi
 }
 
 main() {
         parse_args $@
         for file in "${FILES[@]}" ; do
-               install $PREFIX $file
+               $MODE $PREFIX $file
         done
 }
 
