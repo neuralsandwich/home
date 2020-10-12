@@ -7,15 +7,16 @@
 # Path
 typeset -U path
 path=(/usr/local/bin /opt/local/bin $path[@])
+path=(/usr/local/sbin /opt/local/sbin $path[@])
 
 #-------------------------------------------------------------------------------
 # Go env
 #-------------------------------------------------------------------------------
+export GOENV_SHELL=zsh
 export GOENV_ROOT="${HOME}/.goenv"
 path=($GOENV_ROOT/bin $path[@])
 path=($GOENV_ROOT/shims $path[@])
 
-export GOENV_SHELL=zsh
 source "${GOENV_ROOT}/libexec/../completions/goenv.zsh"
 
 command goenv rehash 2>/dev/null
@@ -34,9 +35,6 @@ goenv() {
   esac
 }
 goenv rehash --only-manage-paths
-
-path=($GOROOT/bin $path[@])
-path=($path[@] $GOPATH/bin)
 
 #-------------------------------------------------------------------------------
 # tfenv
