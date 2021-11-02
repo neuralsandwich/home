@@ -56,7 +56,7 @@
 	gpgsign = true
 
 [gpg]
-	program = gpg2
+	program = gpg
 
 # Make Git easier to use
 [alias]

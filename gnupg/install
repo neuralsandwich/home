@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+readonly INSTALL_PREFIX="${INSTALL_PREFIX}gnupg/"
+
+link_dotfiles() {
+	local files=(gpg.conf gpg-agent.conf)
+
+        if [ ! -d "${INSTALL_PREFIX}" ] ; then
+                mkdir -p "${INSTALL_PREFIX}"
+        fi
+
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+
+        chown -R $(whoami) "${INSTALL_PREFIX}"
+        find "${INSTALL_PREFIX}" -type f -exec chmod 600 {} \;
+        find "${INSTALL_PREFIX}" -type d -exec chmod 700 {} \;
+}
+
+install() {
+        if $(pkgcheck gnupg); then
+                pkginstall gnupg
+        fi
+}
+
+import_public_key() {
+        curl https://keybase.io/neuralsandwich/pgp_keys.asc | gpg --import
+        cat trustlevel.txt | gpg --import-ownertrust
+}
+
+main() {
+	link_dotfiles
+        install
+        import_public_key
+}
+
+main $@

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+readonly TERMINAL_THEME="NeuralTerm.terminal"
+
+install() {
+        if [ ! -f "${TERMINAL_THEME}.installed" ] ; then
+                open "${TERMINAL_THEME}"
+                touch "${TERMINAL_THEME}.installed"
+        fi
+}
+
+main() {
+        install
+}
+
+main $@

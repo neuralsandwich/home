@@ -9,6 +9,10 @@ typeset -U path
 path=(/usr/local/bin /opt/local/bin $path[@])
 path=(/usr/local/sbin /opt/local/sbin $path[@])
 
+if [ -d /opt/homebrew/bin ] ; then
+  path=(/opt/homebrew/bin $path[@])
+fi
+
 #-------------------------------------------------------------------------------
 # Go env
 #-------------------------------------------------------------------------------

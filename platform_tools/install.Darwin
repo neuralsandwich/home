@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+################################################################################
+# Tool Variables
+################################################################################
+
+install_homebrew() {
+	if [ -f homebrew.install ] ; then
+		return
+	fi
+
+	if [ -f /opt/homebrew/bin/brew ] ; then
+		return
+	fi
+	
+	curl -fsSL -o homebrew.install \
+ 		"https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+	bash ./homebrew.install
+}
+
+install_coreutils() {
+	if [ "$(./pkgcheck coreutils)" ] ; then
+		./pkginstall coreutils
+	fi
+}
+
+main() {
+	install_homebrew
+	
+	install_coreutils
+}
+
+main $@

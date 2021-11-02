@@ -1,0 +1,1 @@
+export PATH=${HOME}/.dot/platform_tools/:/opt/homebrew/bin/:$PATH

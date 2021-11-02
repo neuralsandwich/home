@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+main() {
+	local pkg=$1
+
+	if /opt/homebrew/bin/brew list "${pkg}" &>/dev/null ; then
+		exit 1
+	fi
+
+	exit 0
+}
+
+main $@

@@ -19,3 +19,6 @@
 [submodule "vim/vim/pack/git-plugins/start/rainbow"]
 	path = vim/vim/pack/git-plugins/start/rainbow
 	url = https://github.com/luochen1990/rainbow.git
+[submodule "goenv/goenv"]
+	path = goenv/goenv
+	url = https://github.com/syndbg/goenv.git

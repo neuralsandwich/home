@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+FILES=()
+MODE="link"
+PREFIX=""
+
+abort() {
+        local message=$1
+
+        echo "[ERROR] $message" >&2 \
+                && exit 1
+}
+
+parse_args() {
+        while getopts ":l:p:r" opt; do
+                case $opt in
+                        l)
+                                FILES+=("$OPTARG")
+                                ;;
+                        p)
+                                PREFIX=$OPTARG
+                                ;;
+                        r)
+                                MODE="unlink"
+                                ;;
+                        \?)
+                                abort "Invalid option: -$OPTARG"
+                                ;;
+                        :)
+                                abort "Option -$OPTARG requires an argument."
+                                ;;
+                esac
+        done
+        if [ $OPTIND -eq 1 ]; then
+                abort "No options were passed";
+        fi
+}
+
+link() {
+        local prefix=$1
+        local file=$2
+
+
+        # Move any existing files to a backup file
+        if [ -f ${prefix}${file} ] && [ ! -L ${prefix}${file} ] ; then
+                mv "${prefix}${file}" "${prefix}${file}.old"
+        fi
+
+        # Link our dotfile
+        if [ -e $file ] ; then
+                ln -sf $(realpath $file) "${prefix}${file}"
+        else
+                abort "'${file}' does not exist, cannot install"
+        fi
+}
+
+unlink() {
+        local prefix=$1
+        local file=$2
+
+        # Move any existing files to a backup file
+        if [ -L ${prefix}${file} ] ; then
+                rm "${prefix}${file}"
+        else
+                abort "'${prefix}${file}' does not exist, cannot unlink"
+        fi
+}
+
+main() {
+        parse_args $@
+        for file in "${FILES[@]}" ; do
+               $MODE $PREFIX $file
+        done
+}
+
+main $@

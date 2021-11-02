@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+readonly DOT_DIR="${HOME}/.dot"
+export INSTALL_PREFIX="${HOME}/."
+
+TOOLS=$(find . -maxdepth 1 -mindepth 1 -type d -not -name ".*")
+
+main() {
+	echo "################################"
+	echo "# Dot installing"
+	echo "################################"
+
+	pushd platform_tools >& /dev/null
+	./install
+	popd >& /dev/null
+
+	source platform_tools/setup_path
+
+	skips=(./platform_tools ./dot)
+	TOOLS="${TOOLS[@]/$skips}"
+	for tool in ${TOOLS[@]}
+	do
+		pushd "${tool}" >& /dev/null
+		./install
+		popd >& /dev/null
+	done
+}
+
+main $@

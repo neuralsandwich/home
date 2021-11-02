@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+readonly INSTALL_PREFIX="${INSTALL_PREFIX}config/i3/"
+
+link_dotfiles() {
+	local files=(config)
+
+        if [ ! -d "${INSTALL_PREFIX}" ] ; then
+                mkdir -p "${INSTALL_PREFIX}"
+        fi
+
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+main() {
+	link_dotfiles
+}
+
+main $@

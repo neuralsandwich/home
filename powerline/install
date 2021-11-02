@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+link_dotfiles() {
+	local files=(powerline.conf)
+
+        if [ ! -d "${INSTALL_PREFIX}" ] ; then
+                mkdir -p "${INSTALL_PREFIX}"
+        fi
+
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+pip_install() {
+        pip3 install powerline-status
+}
+
+hack_font_install() {
+        brew install homebrew/cask-fonts/font-hack
+}
+
+install() {
+        pip_install
+        hack_font_install
+}
+
+main() {
+	link_dotfiles
+        install
+}
+
+main $@

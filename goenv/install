@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+link_dotfiles() {
+        local files=(goenv)
+        link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+main() {
+        link_dotfiles
+}
+
+main $@
+

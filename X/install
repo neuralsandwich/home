@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+link_dotfiles() {
+	local files=(xinitrc Xresources)
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+main() {
+	link_dotfiles
+}
+
+main $@

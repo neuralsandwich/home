@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+################################################################################
+# Tool Variables
+################################################################################
+
+readonly platform=$(uname -s)
+
+link_pkgtools() {
+	if [ ! -f pkgcheck ] ; then
+		ln -s pkgcheck.$platform pkgcheck
+	fi 
+
+	if [ ! -f pkginstall ] ; then
+		ln -s pkginstall.$platform pkginstall
+	fi
+}
+
+link_setup_path() {
+	if [ ! -f setup_path ] ; then
+		ln -s setup_path.$platform setup_path
+	fi 
+}
+
+main() {
+	source setup_path.$platform
+	link_setup_path
+
+	link_pkgtools
+
+	./install.$platform
+}
+
+main $@

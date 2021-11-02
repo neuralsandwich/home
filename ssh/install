@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+export INSTALL_PREFIX="${INSTALL_PREFIX}ssh/"
+
+link_dotfiles() {
+	local files=(config)
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+main() {
+	link_dotfiles
+}
+
+main $@

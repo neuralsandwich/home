@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+readonly YCM_INSTALL=vim/pack/git-plugins/start/YouCompleteMe/install.py
+
+link_dotfiles() {
+	local files=(vim vimrc)
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+install_dependencies() {
+	local deps=(cmake ninja vim)
+
+	for dep in ${deps[@]}
+	do
+		if pkgcheck "${dep}"; then
+			pkginstall "${dep}"
+		fi
+	done
+
+	pip3 install jedi
+}
+
+get_submodules() {
+	git submodule update --init --recursive -- vim
+}
+
+install_youcompleteme() {
+	if [ ! -f "${YCM_INSTALL}.d" ] ; then
+		python3 "${YCM_INSTALL}" --clangd-completer --clang-tidy --go-completer
+		touch "${YCM_INSTALL}.d"
+	fi
+}
+
+main() {
+	link_dotfiles
+	install_dependencies
+	get_submodules
+	install_youcompleteme
+}
+
+main $@
