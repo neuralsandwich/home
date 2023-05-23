@@ -6,56 +6,37 @@
 
 # Path
 typeset -U path
-path=(/usr/local/bin /opt/local/bin $path[@])
-path=(/usr/local/sbin /opt/local/sbin $path[@])
+path+=(/opt/local/bin /usr/local/bin /usr/bin /bin)
+path+=(/opt/local/sbin /usr/local/sbin /usr/sbin /sbin)
 
 if [ -d /opt/homebrew/bin ] ; then
-  path=(/opt/homebrew/bin $path[@])
+  path=(/opt/homebrew/bin $path)
 fi
 
-#-------------------------------------------------------------------------------
-# Go env
-#-------------------------------------------------------------------------------
-export GOENV_SHELL=zsh
-export GOENV_ROOT="${HOME}/.goenv"
-path=($GOENV_ROOT/bin $path[@])
-path=($GOENV_ROOT/shims $path[@])
-
-source "${GOENV_ROOT}/libexec/../completions/goenv.zsh"
-
-command goenv rehash 2>/dev/null
-goenv() {
-  local command
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
-
-  case "$command" in
-  rehash|shell)
-    eval "$(goenv "sh-$command" "$@")";;
-  *)
-    command goenv "$command" "$@";;
-  esac
-}
-goenv rehash --only-manage-paths
+if [[ "$(uname -s)" == "Darwin" ]] ; then
+  path=(/Library/Apple/usr/bin $path)
+fi
 
 #-------------------------------------------------------------------------------
 # tfenv
 #-------------------------------------------------------------------------------
-path=("$HOME/.tfenv/bin" $path[@])
+path=("$HOME/.tfenv/bin" $path)
 
 # Go
 # Actual Go
-path=("$HOME/.go/bin" $path[@])
+path=("$HOME/.go/bin" $path)
 # Things built by go
-path=("$HOME/go/bin" $path[@])
+path=("$HOME/go/bin" $path)
 
+# Dot File Localtions
+ZSH="$HOME/.zsh"
+DOTFILES="$HOME/.dot"
 # Zsh Function Path
+#
 typeset -U fpath
-fpath=($ZSH/func "${fpath[@]}")
-fpath=($ZSH/func/battery/ "${fpath[@]}")
-fpath=(/usr/share/zsh/site-function "${fpath[@]}")
+fpath+=($ZSH/func)
+fpath+=($ZSH/func/battery)
+fpath+=(/usr/share/zsh/site-function)
 
 # Helper Functions
 _has() {
@@ -64,10 +45,6 @@ _has() {
 
 # Vim key bindings
 bindkey -v
-
-# Dot File Localtions
-ZSH="$HOME/.zsh"
-DOTFILES="$HOME/.dot"
 
 # Environment Variables
 export EDITOR="vim"
@@ -103,5 +80,4 @@ export CCACHE_DIR="$HOME/dev/.ccache"
 export GOPATH=$HOME/go
 
 # Local Config
-# Sourced last as it needs to override
 source "$DOTFILES/local/zshenv"

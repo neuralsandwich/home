@@ -12,7 +12,7 @@ if [[ $(uname) == "Darwin" ]] ; then
     function battery_pct_remaining() {
 	if [[ $(ioreg -rc AppleSmartBattery | grep -c '^.*"ExternalConnected"\ =\ No') -eq 1 ]] ; then
 	    typeset -F maxcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"DesignCapacity"\ =\ ' | sed -e 's/^.*"DesignCapacity"\ =\ //')
-	    typeset -F currentcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"CurrentCapacity"\ =\ ' | sed -e 's/^.*CurrentCapacity"\ =\ //')
+	    typeset -F currentcapacity=$(ioreg -rc "AppleSmartBattery"| grep '^.*"AppleRawCurrentCapacity"\ =\ ' | sed -e 's/^.*AppleRawCurrentCapacity"\ =\ //')
 	    integer i=$(((currentcapacity/maxcapacity) * 100))
 	    echo $i
 	else

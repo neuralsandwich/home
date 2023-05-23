@@ -7,19 +7,13 @@ colors
 # Allow for functions in the prompt.
 setopt PROMPT_SUBST
 
-__GIT_PROMPT_AVAILABLE="no"
+__GIT_PROMPT_AVAILABLE="$(hash git-prompt &> /dev/null && echo yes || echo no)"
 
 git_prompt_available() {
-    return git-prompt 2&>1 /dev/nulls
+    hash git-prompt &> /dev/null
 }
 
-setup() {
-    if [[ git_prompt_available != 0 ]] ; then
-	source "${ZSH}/func/git-prompt/zshrc-gitstatus.sh"
-    else
-	__GIT_PROMPT_AVAILABLE="yes"
-    fi
-}
+source "${ZSH}/func/git-prompt/zshrc-gitstatus.sh"
 
 git_prompt() {
   if [[ ${__GIT_PROMPT_AVAILABLE} == "no" ]] ; then
@@ -43,5 +37,3 @@ git_prompt() {
       fi
   fi
 }
-
-setup
