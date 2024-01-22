@@ -1,0 +1,2088 @@
+DBG 2023-10-20T20:27:14.568 ?.24514    process_spawn:134: new: pid=24515 exepath=[/usr/local/bin/nvim]
+DBG 2023-10-20T20:27:14.569 ?.24514    rpc_start:143: rpc ch 3 in-stream=0x12281be70 out-stream=0x12281c020
+INF 2023-10-20T20:27:14.569 ?.24514    set_init_2:589: startup runtimepath/packpath value: /Users/xlvdk/.config/nvim,/etc/xdg/nvim,/Users/xlvdk/.local/share/nvim/site,/usr/local/share/nvim/site,/usr/share/nvim/site,/usr/local/share/nvim/runtime,/usr/local/lib/nvim,/usr/share/nvim/site/after,/usr/local/share/nvim/site/after,/Users/xlvdk/.local/share/nvim/site/after,/etc/xdg/nvim/after,/Users/xlvdk/.config/nvim/after
+DBG 2023-10-20T20:27:14.569 ?.24514    tui_get_stty_erase:2256: stty/termios:erase=
+DBG 2023-10-20T20:27:14.569 ?.24514    tui_tk_ti_getstr:2273: libtermkey:kbs=
+DBG 2023-10-20T20:27:14.570 ?.24514    tui_tk_ti_getstr:2278: libtermkey:kdch1=[3~
+DBG 2023-10-20T20:27:14.570 ?.24514    tui_tk_ti_getstr:2284: libtermkey:kmous=[M
+DBG 2023-10-20T20:27:14.572 ?.24514    handle_background_color:674: bg response: dark
+DBG 2023-10-20T20:27:14.572 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_ui_attach", [210, 80, {"rgb"=>true, "ext_linegrid"=>true, "ext_termcolors"=>true, "term_name"=>"xterm-256color", "term_background"=>"dark", "term_colors"=>256, "stdin_tty"=>true, "stdout_tty"=>true}]]
+DBG 2023-10-20T20:27:14.575 ?.24515    rpc_start:143: rpc ch 1 in-stream=0x14f812fd0 out-stream=0x14f812e20
+INF 2023-10-20T20:27:14.576 nvim.24515.0 set_init_2:589: startup runtimepath/packpath value: /Users/xlvdk/.config/nvim,/etc/xdg/nvim,/Users/xlvdk/.local/share/nvim/site,/usr/local/share/nvim/site,/usr/share/nvim/site,/usr/local/share/nvim/runtime,/usr/local/lib/nvim,/usr/share/nvim/site/after,/usr/local/share/nvim/site/after,/Users/xlvdk/.local/share/nvim/site/after,/etc/xdg/nvim/after,/Users/xlvdk/.config/nvim/after
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 receive_msgpack:303: ch 1: parsing 141 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_attach
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_attach
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 handle_nvim_ui_attach:4256: RPC: ch 1: invoke nvim_ui_attach
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: option_set
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: option_set (+13 times...)
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: set_icon
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: set_title
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: default_colors_set
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: option_set
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: option_set (+4 times...)
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: default_colors_set
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: grid_resize
+DBG 2023-10-20T20:27:14.577 nvim.24515.0 UI: grid_clear
+DBG 2023-10-20T20:27:14.578 nvim.24515.0 UI: update_menu
+DBG 2023-10-20T20:27:14.578 ?.24514    receive_msgpack:303: ch 3: parsing 3850 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:14.578 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_ui_set_option", ["rgb", false]]
+DBG 2023-10-20T20:27:14.580 nvim.24515.0 receive_msgpack:303: ch 1: parsing 27 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:14.580 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_set_option
+DBG 2023-10-20T20:27:14.580 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_set_option
+INF 2023-10-20T20:27:14.583 nvim.24515.0 emsg_multiline:718: E739: Cannot create directory /Users/xlvdk/.local/share: permission denied (<SNR>13_GetManifestPath (line 10))
+DBG 2023-10-20T20:27:14.583 nvim.24515.0 UI: update_menu (+10 times...)
+DBG 2023-10-20T20:27:14.583 nvim.24515.0 UI: raw_line
+INF 2023-10-20T20:27:14.585 nvim.24515.0 emsg_multiline:720: E5113: Error while calling lua chunk: /Users/xlvdk/.config/nvim/plugin/packer_compiled.lua:8: /Users/xlvdk/.config/nvim/plugin/packer_compiled.lua: Vim(packadd):E919: Directory not found in 'packpath': "pack/*/opt/packer.nvim"
+stack traceback:
+	[C]: in function 'nvim_command'
+	/Users/xlvdk/.config/nvim/plugin/packer_compiled.lua:8: in main chunk
+INF 2023-10-20T20:27:14.587 nvim.24515.0 emsg_multiline:720: E5113: Error while calling lua chunk: /Users/xlvdk/.config/nvim/after/plugin/lsp.lua:1: module 'lsp-zero' not found:
+	no field package.preload['lsp-zero']
+	no file './lsp-zero.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/luajit-2.1/lsp-zero.lua'
+	no file '/usr/local/share/lua/5.1/lsp-zero.lua'
+	no file '/usr/local/share/lua/5.1/lsp-zero/init.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/lsp-zero.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/lsp-zero/init.lua'
+	no file './lsp-zero.so'
+	no file '/usr/local/lib/lua/5.1/lsp-zero.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/lsp-zero.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+	[C]: in function 'require'
+	/Users/xlvdk/.config/nvim/after/plugin/lsp.lua:1: in main chunk
+INF 2023-10-20T20:27:14.587 nvim.24515.0 emsg_multiline:720: E5113: Error while calling lua chunk: /Users/xlvdk/.config/nvim/after/plugin/mason.lua:1: module 'mason' not found:
+	no field package.preload['mason']
+	no file './mason.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/luajit-2.1/mason.lua'
+	no file '/usr/local/share/lua/5.1/mason.lua'
+	no file '/usr/local/share/lua/5.1/mason/init.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/mason.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/mason/init.lua'
+	no file './mason.so'
+	no file '/usr/local/lib/lua/5.1/mason.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/mason.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+	[C]: in function 'require'
+	/Users/xlvdk/.config/nvim/after/plugin/mason.lua:1: in main chunk
+INF 2023-10-20T20:27:14.588 nvim.24515.0 emsg_multiline:720: E5113: Error while calling lua chunk: /Users/xlvdk/.config/nvim/after/plugin/telescope.lua:1: module 'telescope.builtin' not found:
+	no field package.preload['telescope.builtin']
+	no file './telescope/builtin.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/luajit-2.1/telescope/builtin.lua'
+	no file '/usr/local/share/lua/5.1/telescope/builtin.lua'
+	no file '/usr/local/share/lua/5.1/telescope/builtin/init.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/telescope/builtin.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/telescope/builtin/init.lua'
+	no file './telescope/builtin.so'
+	no file '/usr/local/lib/lua/5.1/telescope/builtin.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/telescope/builtin.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './telescope.so'
+	no file '/usr/local/lib/lua/5.1/telescope.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/telescope.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+	[C]: in function 'require'
+	/Users/xlvdk/.config/nvim/after/plugin/telescope.lua:1: in main chunk
+INF 2023-10-20T20:27:14.588 nvim.24515.0 emsg_multiline:720: E5113: Error while calling lua chunk: /Users/xlvdk/.config/nvim/after/plugin/treesitter.lua:1: module 'nvim-treesitter.configs' not found:
+	no field package.preload['nvim-treesitter.configs']
+	no file './nvim-treesitter/configs.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/luajit-2.1/nvim-treesitter/configs.lua'
+	no file '/usr/local/share/lua/5.1/nvim-treesitter/configs.lua'
+	no file '/usr/local/share/lua/5.1/nvim-treesitter/configs/init.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/nvim-treesitter/configs.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/nvim-treesitter/configs/init.lua'
+	no file './nvim-treesitter/configs.so'
+	no file '/usr/local/lib/lua/5.1/nvim-treesitter/configs.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/nvim-treesitter/configs.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './nvim-treesitter.so'
+	no file '/usr/local/lib/lua/5.1/nvim-treesitter.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/nvim-treesitter.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+	[C]: in function 'require'
+	/Users/xlvdk/.config/nvim/after/plugin/treesitter.lua:1: in main chunk
+DBG 2023-10-20T20:27:14.588 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:14.588 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:14.588 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:14.588 ?.24514    receive_msgpack:303: ch 3: parsing 1802 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:14.589 ?.24514    receive_msgpack:303: ch 3: parsing 6720 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:14.589 nvim.24515.0 UI: raw_line (+78 times...)
+DBG 2023-10-20T20:27:14.589 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:14.589 nvim.24515.0 UI: mode_info_set
+DBG 2023-10-20T20:27:14.589 nvim.24515.0 UI: mouse_off
+DBG 2023-10-20T20:27:14.589 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:14.589 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:14.589 ?.24514    receive_msgpack:303: ch 3: parsing 6710 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:14.589 ?.24514    receive_msgpack:303: ch 3: parsing 3503 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:14.640 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:15.301 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:15.303 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:15.303 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:15.303 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:15.303 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:15.303 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:15.303 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:15.304 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:15.304 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:15.304 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:15.304 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:15.304 ?.24514    receive_msgpack:303: ch 3: parsing 238 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:15.355 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:15.582 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:15.583 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:15.583 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:15.583 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:15.583 nvim.24515.0 UI: raw_line
+INF 2023-10-20T20:27:15.584 nvim.24515.0 emsg_multiline:720: E5113: Error while calling lua chunk: /Users/xlvdk/.config/nvim/after/plugin/worktree.lua:1: module 'git-worktree' not found:
+	no field package.preload['git-worktree']
+	no file './git-worktree.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/luajit-2.1/git-worktree.lua'
+	no file '/usr/local/share/lua/5.1/git-worktree.lua'
+	no file '/usr/local/share/lua/5.1/git-worktree/init.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/git-worktree.lua'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/share/lua/5.1/git-worktree/init.lua'
+	no file './git-worktree.so'
+	no file '/usr/local/lib/lua/5.1/git-worktree.so'
+	no file '/Users/xlvdk/projects/github.com/neovim/neovim/.deps/usr/lib/lua/5.1/git-worktree.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+	[C]: in function 'require'
+	/Users/xlvdk/.config/nvim/after/plugin/worktree.lua:1: in main chunk
+DBG 2023-10-20T20:27:15.585 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:15.585 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:15.585 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:15.585 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:15.585 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:15.585 ?.24514    receive_msgpack:303: ch 3: parsing 368 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:15.585 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:15.637 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.081 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.082 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.082 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.082 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.082 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.083 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.083 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.083 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.083 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.083 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.083 ?.24514    receive_msgpack:303: ch 3: parsing 409 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.083 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.134 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.165 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.165 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.165 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.166 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.166 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.166 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.166 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.166 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.166 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.167 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.167 ?.24514    receive_msgpack:303: ch 3: parsing 530 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.167 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.218 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.250 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.251 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.251 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.252 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.252 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.252 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.252 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.252 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.253 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.253 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.253 ?.24514    receive_msgpack:303: ch 3: parsing 279 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.253 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.304 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.332 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.333 ?.24514    receive_msgpack:303: ch 3: parsing 243 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.333 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.384 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.416 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.416 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.417 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.417 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.417 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.417 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.418 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.418 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.418 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.418 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.418 ?.24514    receive_msgpack:303: ch 3: parsing 459 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.418 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.469 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.501 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.501 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.502 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.502 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.502 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.502 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.502 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.503 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.503 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.503 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.503 ?.24514    receive_msgpack:303: ch 3: parsing 312 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.503 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.554 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.580 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.581 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.581 ?.24514    receive_msgpack:303: ch 3: parsing 327 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.582 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.633 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.663 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.663 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.664 ?.24514    receive_msgpack:303: ch 3: parsing 450 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.664 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.716 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.751 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.752 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.752 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.752 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.753 ?.24514    receive_msgpack:303: ch 3: parsing 465 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.753 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.805 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.834 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.835 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.836 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.836 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.836 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.836 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.836 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.836 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.837 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.837 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.837 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.837 ?.24514    receive_msgpack:303: ch 3: parsing 240 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.888 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.919 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:16.920 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:16.920 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:16.920 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:16.920 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.921 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:16.921 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:16.921 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:16.921 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:16.921 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:16.922 ?.24514    receive_msgpack:303: ch 3: parsing 303 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:16.922 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:16.973 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.007 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.007 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.007 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.007 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.008 ?.24514    receive_msgpack:303: ch 3: parsing 441 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.008 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.059 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.088 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.089 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.089 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.089 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.089 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.090 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:17.090 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:17.090 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.090 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.090 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.090 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.090 ?.24514    receive_msgpack:303: ch 3: parsing 288 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.141 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.170 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.171 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.171 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.171 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.172 ?.24514    receive_msgpack:303: ch 3: parsing 208 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.172 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.223 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.252 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.253 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.253 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.253 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.253 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.254 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:17.254 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:17.254 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.254 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.254 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.254 ?.24514    receive_msgpack:303: ch 3: parsing 238 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.254 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.305 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.338 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.339 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.340 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.340 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.340 nvim.24515.0 UI: raw_line
+INF 2023-10-20T20:27:17.340 nvim.24515.0 emsg_multiline:720: E886: System error while opening ShaDa file /Users/xlvdk/.local/state/nvim/shada/main.shada for reading: permission denied
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 UI: mode_info_set
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.341 ?.24514    receive_msgpack:303: ch 3: parsing 2129 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.341 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.392 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.424 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.424 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.424 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.425 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.425 nvim.24515.0 UI: raw_line
+INF 2023-10-20T20:27:17.426 nvim.24515.0 main:639: starting main loop
+DBG 2023-10-20T20:27:17.426 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:17.426 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:17.426 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.426 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.426 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:17.427 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.427 ?.24514    receive_msgpack:303: ch 3: parsing 635 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.427 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.478 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.506 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.507 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.507 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.508 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.508 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:17.509 nvim.24515.0 UI: hl_group_set
+DBG 2023-10-20T20:27:17.509 nvim.24515.0 UI: hl_group_set (+56 times...)
+DBG 2023-10-20T20:27:17.509 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.510 nvim.24515.0 UI: raw_line (+103 times...)
+DBG 2023-10-20T20:27:17.510 ?.24514    receive_msgpack:303: ch 3: parsing 3429 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.510 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:17.510 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.511 ?.24514    receive_msgpack:303: ch 3: parsing 198 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 handle_nvim_ui_set_option:4463: RPC: ch 1: invoke nvim_ui_set_option
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.511 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.562 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.562 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.562 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.592 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 UI: flush (+6 times...)
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.593 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.593 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.594 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.594 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.594 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.594 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.594 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.645 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.645 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.645 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.674 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.675 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.675 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.675 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.676 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.726 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.727 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.727 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.756 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.757 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.757 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.757 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.758 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.758 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.758 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.809 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.809 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.809 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.840 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.841 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.841 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.841 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.841 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.842 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.842 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.842 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.894 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.894 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.894 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.924 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:17.925 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:17.925 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:17.925 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:17.925 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:17.925 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.926 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.926 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:17.926 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:17.978 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:17.978 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:17.978 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:18.030 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:21.838 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [":"]]
+DBG 2023-10-20T20:27:21.839 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:21.839 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:21.840 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:21.840 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:21.840 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:21.840 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:21.840 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:21.840 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:21.840 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:21.841 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:21.841 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:21.841 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:21.841 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:21.841 nvim.24515.0 UI: mouse_off
+DBG 2023-10-20T20:27:21.842 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:21.842 ?.24514    receive_msgpack:303: ch 3: parsing 131 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:21.842 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:21.842 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:21.893 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:22.599 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["e"]]
+DBG 2023-10-20T20:27:22.600 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:22.600 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:22.600 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:22.600 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:22.600 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:22.600 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:22.601 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:22.601 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:22.601 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:22.601 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:22.601 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:22.601 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:22.601 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:22.652 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:23.013 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:23.014 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.015 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.015 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.015 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:23.066 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:23.189 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:23.190 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:23.190 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:23.190 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:27:23.191 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.192 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.192 ?.24514    receive_msgpack:303: ch 3: parsing 143 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.192 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:23.243 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:23.243 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.243 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:23.251 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [" "]]
+DBG 2023-10-20T20:27:23.251 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:23.251 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:23.251 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:23.252 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.252 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:23.252 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:23.252 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.252 ?.24514    receive_msgpack:303: ch 3: parsing 57 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.252 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.880 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [" "]]
+DBG 2023-10-20T20:27:23.881 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:23.881 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:23.881 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:23.882 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.882 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:23.882 ?.24514    receive_msgpack:303: ch 3: parsing 57 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.982 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["p"]]
+DBG 2023-10-20T20:27:23.983 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:23.983 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:23.983 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:23.983 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:23.983 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:23.984 nvim.24515.0 UI: raw_line (+2 times...)
+DBG 2023-10-20T20:27:23.984 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:23.984 ?.24514    receive_msgpack:303: ch 3: parsing 89 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:23.984 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.118 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["f"]]
+DBG 2023-10-20T20:27:24.118 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:24.118 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:24.119 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:24.119 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:24.119 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:24.119 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:24.119 nvim.24515.0 state_enter:96: input: <p>
+INF 2023-10-20T20:27:24.119 nvim.24515.0 emsg_multiline:720: E353: Nothing in register "
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 state_enter:96: input: <f>
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:24.120 ?.24514    receive_msgpack:303: ch 3: parsing 168 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:24.120 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:24.120 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.171 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.943 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [":"]]
+DBG 2023-10-20T20:27:24.943 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:24.944 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:24.944 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:24.945 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:24.945 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:24.945 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.945 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:24.996 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:24.996 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:24.997 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:25.048 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:25.117 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["e"]]
+DBG 2023-10-20T20:27:25.118 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:25.118 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:25.118 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:25.118 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:25.119 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:25.119 ?.24514    receive_msgpack:303: ch 3: parsing 53 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.119 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:25.170 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:25.171 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.171 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:25.213 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [" "]]
+DBG 2023-10-20T20:27:25.214 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:25.214 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:25.214 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:25.215 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.215 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:25.215 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:25.215 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:25.215 ?.24514    receive_msgpack:303: ch 3: parsing 57 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:25.215 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.889 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<C-c>"]]
+DBG 2023-10-20T20:27:25.889 nvim.24515.0 receive_msgpack:303: ch 1: parsing 20 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 state_enter:96: input: <C-C>
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.890 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:25.891 ?.24514    receive_msgpack:303: ch 3: parsing 207 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.891 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:25.942 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:25.942 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:25.942 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:25.993 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.132 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [":"]]
+DBG 2023-10-20T20:27:26.133 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:26.133 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:26.134 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:26.134 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:26.135 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:26.135 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:26.135 nvim.24515.0 UI: mouse_off
+DBG 2023-10-20T20:27:26.135 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:26.135 ?.24514    receive_msgpack:303: ch 3: parsing 131 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:26.135 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.135 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.186 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.294 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [" "]]
+DBG 2023-10-20T20:27:26.295 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:26.295 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:26.295 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:26.295 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:26.295 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.296 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.296 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:26.296 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:26.296 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:26.296 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:26.296 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.296 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.347 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.428 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["e"]]
+DBG 2023-10-20T20:27:26.429 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:26.430 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:26.430 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:26.430 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:26.430 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:26.430 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:26.430 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:26.431 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:26.431 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.431 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:26.431 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.431 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.431 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.482 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.933 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:26.934 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:26.934 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:26.934 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:26.935 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:26.935 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:26.936 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:26.936 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:26.936 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:26.936 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:26.987 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.094 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:27.095 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:27.095 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:27.095 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:27.096 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:27.096 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.096 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.097 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:27.097 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.097 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.097 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.097 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.097 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.149 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.197 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["e"]]
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:27.198 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.199 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.199 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.199 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.199 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.199 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.199 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.250 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.317 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [" "]]
+DBG 2023-10-20T20:27:27.318 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:27.318 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 UI: flush (+6 times...)
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.319 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.371 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.732 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Tab>"]]
+DBG 2023-10-20T20:27:27.733 nvim.24515.0 receive_msgpack:303: ch 1: parsing 20 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:27.733 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:27.733 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:27.734 nvim.24515.0 state_enter:96: input: <Tab>
+DBG 2023-10-20T20:27:27.734 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:27.734 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:27.734 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.734 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.734 ?.24514    receive_msgpack:303: ch 3: parsing 72 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.734 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:27.735 ?.24514    receive_msgpack:303: ch 3: parsing 99 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: raw_line (+5 times...)
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.735 ?.24514    receive_msgpack:303: ch 3: parsing 248 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.735 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:27.736 ?.24514    receive_msgpack:303: ch 3: parsing 126 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:27.736 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:27.787 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.178 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:29.179 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:29.179 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:29.179 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:29.179 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:29.179 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:29.179 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 UI: raw_line (+4 times...)
+DBG 2023-10-20T20:27:29.180 ?.24514    receive_msgpack:303: ch 3: parsing 142 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.180 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.180 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.232 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.364 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:29.364 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:29.364 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:29.364 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:29.364 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.365 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.365 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.417 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.540 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:29.541 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:29.542 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:29.542 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:29.542 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.543 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.543 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.543 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.544 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.594 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.708 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:29.709 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:29.709 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:29.709 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.710 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:29.710 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:29.711 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.711 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.711 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.711 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.762 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.868 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:29.869 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:29.869 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:29.869 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:29.869 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.870 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:29.870 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:29.870 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:29.921 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.043 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:30.044 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:30.044 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:30.044 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:30.044 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.045 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.045 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.045 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.096 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.206 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.207 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:30.208 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:30.208 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.208 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.208 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.208 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.259 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.356 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Backspace>"]]
+DBG 2023-10-20T20:27:30.357 nvim.24515.0 receive_msgpack:303: ch 1: parsing 26 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:30.357 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:30.357 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 state_enter:96: input: <BS>
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.358 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.358 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.358 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.410 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.685 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["E"]]
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 state_enter:96: input: <E>
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:30.686 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:30.687 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.687 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.687 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.687 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.687 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.687 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.738 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:30.957 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["x"]]
+DBG 2023-10-20T20:27:30.958 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:30.958 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:30.958 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:30.958 nvim.24515.0 state_enter:96: input: <x>
+DBG 2023-10-20T20:27:30.958 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:30.958 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:30.959 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:30.959 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:30.959 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.959 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:30.959 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.959 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:30.959 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:31.010 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:31.111 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:31.112 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:31.112 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:31.112 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:31.112 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:31.112 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:31.112 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:31.113 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:31.113 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:31.131 nvim.24515.0 emsg_multiline:708: (:silent) E739: Cannot create directory /Users/xlvdk/.local/share/nvim: permission denied (<SNR>31_NetrwHome (line 14))
+DBG 2023-10-20T20:27:31.141 nvim.24515.0 emsg_multiline:708: (:silent) E225: global mapping already exists for  (<SNR>31_NetrwMaps (line 144))
+DBG 2023-10-20T20:27:31.151 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 65))
+DBG 2023-10-20T20:27:31.151 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 68))
+DBG 2023-10-20T20:27:31.154 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: raw_line (+5 times...)
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: hl_attr_define
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: hl_attr_define
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: hl_attr_define
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: hl_attr_define (+3 times...)
+DBG 2023-10-20T20:27:31.155 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 UI: raw_line (+19 times...)
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:31.156 ?.24514    receive_msgpack:303: ch 3: parsing 2305 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:31.156 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:31.207 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:31.207 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:31.207 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:31.259 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:31.942 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:31.943 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:31.943 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:31.944 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:31.944 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:31.945 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:31.945 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:31.945 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:31.945 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:31.945 ?.24514    receive_msgpack:303: ch 3: parsing 198 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:31.945 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:31.945 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:31.996 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:31.996 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:31.997 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:32.048 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:32.311 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:32.312 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:32.312 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:32.312 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:32.313 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:32.313 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:32.313 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:32.313 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:32.313 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:32.313 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:32.313 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:32.314 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:32.314 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:32.314 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:32.314 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:32.314 ?.24514    receive_msgpack:303: ch 3: parsing 218 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:32.314 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:32.314 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:32.365 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:32.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:32.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:32.417 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:33.768 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:33.769 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:33.769 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:33.769 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:33.770 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:33.770 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:33.770 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:33.770 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:33.770 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:33.770 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:33.770 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:33.771 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:33.771 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:33.771 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:33.771 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:33.771 ?.24514    receive_msgpack:303: ch 3: parsing 215 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:33.771 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:33.771 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:33.822 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:33.823 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:33.823 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:33.874 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:34.925 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:34.926 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:34.926 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:34.926 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:34.927 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:34.927 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:34.927 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:34.927 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:34.927 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:34.927 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:34.927 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:34.928 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:34.929 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:34.929 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:34.929 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:34.929 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:34.929 ?.24514    receive_msgpack:303: ch 3: parsing 218 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:34.929 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:34.980 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:34.980 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:34.981 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:35.032 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:35.100 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:35.101 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:35.101 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:35.101 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:35.101 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <C-U>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <n>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <#>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <L>
+DBG 2023-10-20T20:27:35.102 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:35.103 nvim.24515.0 state_enter:96: input: <k>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:35.104 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <g>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <D>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <i>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <,>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <G>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <W>
+DBG 2023-10-20T20:27:35.105 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <d>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:35.106 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:35.122 nvim.24515.0 emsg_multiline:708: (:silent) E225: global mapping already exists for  (<SNR>31_NetrwMaps (line 144))
+DBG 2023-10-20T20:27:35.131 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 65))
+DBG 2023-10-20T20:27:35.131 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 68))
+DBG 2023-10-20T20:27:35.134 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:35.134 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 UI: raw_line (+10 times...)
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:35.135 ?.24514    receive_msgpack:303: ch 3: parsing 433 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:35.135 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:35.187 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:35.187 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:35.187 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:35.238 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:36.364 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:36.365 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <C-U>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <n>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.366 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <#>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <L>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:36.367 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <k>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.368 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <g>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <D>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <i>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <,>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:36.369 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <G>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <W>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <d>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:36.370 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:36.383 nvim.24515.0 emsg_multiline:708: (:silent) E225: global mapping already exists for  (<SNR>31_NetrwMaps (line 144))
+DBG 2023-10-20T20:27:36.393 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 65))
+DBG 2023-10-20T20:27:36.393 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 68))
+DBG 2023-10-20T20:27:36.397 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:36.397 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 UI: raw_line (+9 times...)
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:36.398 ?.24514    receive_msgpack:303: ch 3: parsing 564 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:36.398 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:36.449 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:36.449 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:36.449 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:36.501 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:36.940 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["k"]]
+DBG 2023-10-20T20:27:36.941 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:36.941 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 state_enter:96: input: <k>
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:36.942 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:36.942 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:36.943 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:36.943 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:36.943 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:36.943 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:36.944 ?.24514    receive_msgpack:303: ch 3: parsing 218 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:36.944 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:36.944 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:36.995 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:36.995 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:36.995 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.047 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.331 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:37.332 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:37.332 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:37.332 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:37.332 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:37.332 nvim.24515.0 state_enter:96: input: <C-U>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <n>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <#>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <L>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:37.333 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <k>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:37.334 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:37.335 nvim.24515.0 state_enter:96: input: <g>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <D>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <i>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <,>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <G>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <W>
+DBG 2023-10-20T20:27:37.336 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <d>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:37.337 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:37.353 nvim.24515.0 emsg_multiline:708: (:silent) E225: global mapping already exists for  (<SNR>31_NetrwMaps (line 144))
+DBG 2023-10-20T20:27:37.362 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 65))
+DBG 2023-10-20T20:27:37.362 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 68))
+DBG 2023-10-20T20:27:37.365 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:37.365 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 UI: raw_line (+10 times...)
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:37.366 ?.24514    receive_msgpack:303: ch 3: parsing 412 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:37.366 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.418 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:37.418 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:37.418 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.469 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.887 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:37.888 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:37.888 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:37.888 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:37.888 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:37.889 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:37.889 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:37.889 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:37.889 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:37.889 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:37.889 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:37.890 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:37.890 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:37.890 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:37.890 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:37.890 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:37.890 ?.24514    receive_msgpack:303: ch 3: parsing 198 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:37.891 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.942 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:37.942 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:37.942 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:37.994 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.069 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:38.070 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:38.071 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:38.071 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:38.072 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:38.072 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:38.072 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:38.072 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:38.072 ?.24514    receive_msgpack:303: ch 3: parsing 218 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:38.072 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.073 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.124 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:38.124 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.124 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.175 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.287 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:38.288 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:38.288 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:38.288 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:38.288 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:38.288 nvim.24515.0 state_enter:96: input: <C-U>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <n>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <#>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <L>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:38.289 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <k>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:38.290 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <g>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <D>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <i>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <,>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.291 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <G>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <W>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <d>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:38.292 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:38.307 nvim.24515.0 emsg_multiline:708: (:silent) E225: global mapping already exists for  (<SNR>31_NetrwMaps (line 144))
+DBG 2023-10-20T20:27:38.317 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 65))
+DBG 2023-10-20T20:27:38.317 nvim.24515.0 emsg_multiline:708: (:silent) E31: No such mapping (<SNR>31_NetrwWideListing (line 68))
+DBG 2023-10-20T20:27:38.320 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:38.320 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 UI: raw_line (+7 times...)
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.321 ?.24514    receive_msgpack:303: ch 3: parsing 468 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:38.321 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.372 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:38.372 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.372 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.424 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:38.945 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:38.946 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:38.946 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:38.946 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:38.947 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:38.947 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.947 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:38.947 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:38.947 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:38.947 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:38.947 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:38.948 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:38.948 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:38.948 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:38.948 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:38.949 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:38.949 ?.24514    receive_msgpack:303: ch 3: parsing 198 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:38.949 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:39.000 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:39.000 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:39.000 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:39.052 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:39.194 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["j"]]
+DBG 2023-10-20T20:27:39.195 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:39.195 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:39.195 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:39.195 nvim.24515.0 state_enter:96: input: <j>
+DBG 2023-10-20T20:27:39.195 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:39.195 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:39.196 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:39.196 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:39.197 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:39.197 ?.24514    receive_msgpack:303: ch 3: parsing 223 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:39.197 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:39.248 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:39.248 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:39.248 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:39.300 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:39.394 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 state_enter:96: input: <C-U>
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:39.395 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <n>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <#>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <L>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <a>
+DBG 2023-10-20T20:27:39.396 nvim.24515.0 state_enter:96: input: <l>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <k>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:39.397 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <B>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <C>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <h>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <g>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <D>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <i>
+DBG 2023-10-20T20:27:39.398 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <,>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <SNR>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <3>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <1>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <_>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <N>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <w>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <G>
+DBG 2023-10-20T20:27:39.399 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <t>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <W>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <d>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <(>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <)>
+DBG 2023-10-20T20:27:39.400 nvim.24515.0 state_enter:96: input: <CR>
+INF 2023-10-20T20:27:39.410 nvim.24515.0 emsg_multiline:718: E886: System error while opening ShaDa file /Users/xlvdk/.local/state/nvim/shada/main.shada for reading: permission denied (<SNR>31_NetrwBrowseChgDir (line 197))
+DBG 2023-10-20T20:27:39.410 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:39.410 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:39.416 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:39.416 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:39.416 nvim.24515.0 UI: raw_line (+3 times...)
+DBG 2023-10-20T20:27:39.417 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:39.417 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:39.417 nvim.24515.0 UI: mouse_off
+DBG 2023-10-20T20:27:39.417 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:39.417 ?.24514    receive_msgpack:303: ch 3: parsing 912 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:39.417 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:39.468 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:40.667 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:40.668 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:40.668 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:40.669 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:40.670 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:40.670 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 UI: raw_line (+19 times...)
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:40.671 ?.24514    receive_msgpack:303: ch 3: parsing 730 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:40.671 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:40.722 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:40.723 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:40.723 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:40.774 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:41.469 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [":"]]
+DBG 2023-10-20T20:27:41.470 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:41.470 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:41.470 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:41.471 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: mouse_off
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:41.471 ?.24514    receive_msgpack:303: ch 3: parsing 131 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:41.471 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:41.472 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:41.523 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.317 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["s"]]
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 state_enter:96: input: <s>
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:42.318 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:42.319 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:42.319 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:42.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.319 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.370 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.440 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["o"]]
+DBG 2023-10-20T20:27:42.440 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:42.441 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:42.441 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:42.441 nvim.24515.0 state_enter:96: input: <o>
+DBG 2023-10-20T20:27:42.441 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:42.442 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.442 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.493 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.541 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["u"]]
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 state_enter:96: input: <u>
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:42.542 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:42.542 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.543 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.543 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.543 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.594 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.699 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["r"]]
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 state_enter:96: input: <r>
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:42.700 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.700 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.701 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.701 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.752 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:42.980 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["c"]]
+DBG 2023-10-20T20:27:42.981 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:42.981 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 state_enter:96: input: <c>
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:42.982 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:42.982 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.034 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.076 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["e"]]
+DBG 2023-10-20T20:27:43.077 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:43.077 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:43.077 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:43.077 nvim.24515.0 state_enter:96: input: <e>
+DBG 2023-10-20T20:27:43.078 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:43.078 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:43.078 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:43.078 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:43.078 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:43.078 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.078 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.079 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.079 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.129 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.130 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [" "]]
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 state_enter:96: input: <Space>
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 UI: flush (+6 times...)
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.131 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:43.131 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.182 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.311 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["."]]
+DBG 2023-10-20T20:27:43.312 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:43.312 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:43.312 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 state_enter:96: input: <.>
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:43.313 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.313 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.365 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:43.443 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:43.444 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:43.444 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:43.445 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:43.445 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:27:43.445 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:27:43.445 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:43.445 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:43.445 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:43.445 nvim.24515.0 UI: raw_line
+INF 2023-10-20T20:27:43.447 nvim.24515.0 emsg_multiline:720: E484: Cannot open file .
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 UI: grid_scroll
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 UI: raw_line (+2 times...)
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:43.448 ?.24514    receive_msgpack:303: ch 3: parsing 453 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:43.448 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:43.499 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:44.244 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:27:44.245 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:44.245 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:27:44.246 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:27:44.247 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:27:44.247 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:27:44.247 nvim.24515.0 UI: raw_line (+5 times...)
+DBG 2023-10-20T20:27:44.247 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:27:44.247 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:27:44.248 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:27:44.248 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:27:44.248 ?.24514    receive_msgpack:303: ch 3: parsing 306 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:27:44.248 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:44.248 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:44.298 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:44.299 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:44.299 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:44.351 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:51.445 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_ui_set_focus", [false]]
+DBG 2023-10-20T20:27:51.445 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:27:51.446 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_set_focus
+DBG 2023-10-20T20:27:51.446 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_set_focus
+DBG 2023-10-20T20:27:51.446 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:27:51.446 nvim.24515.0 handle_nvim_ui_set_focus:4362: RPC: ch 1: invoke nvim_ui_set_focus
+DBG 2023-10-20T20:27:51.447 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:27:51.447 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:27:51.499 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:28:12.921 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_ui_set_focus", [true]]
+DBG 2023-10-20T20:28:12.921 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:28:12.922 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_set_focus
+DBG 2023-10-20T20:28:12.922 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_set_focus
+DBG 2023-10-20T20:28:12.922 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:28:12.922 nvim.24515.0 handle_nvim_ui_set_focus:4362: RPC: ch 1: invoke nvim_ui_set_focus
+DBG 2023-10-20T20:28:12.922 nvim.24515.0 emsg_multiline:708: (:silent) E516: No buffers were deleted: sil! keepj bd 1 (<SNR>31_LocalBrowseRefresh (line 42))
+DBG 2023-10-20T20:28:12.922 nvim.24515.0 emsg_multiline:708: (:silent) E516: No buffers were deleted: sil! keepj bd 2 (<SNR>31_LocalBrowseRefresh (line 42))
+DBG 2023-10-20T20:28:12.923 nvim.24515.0 emsg_multiline:708: (:silent) E516: No buffers were deleted: sil! keepj bd 3 (<SNR>31_LocalBrowseRefresh (line 42))
+DBG 2023-10-20T20:28:12.923 nvim.24515.0 emsg_multiline:708: (:silent) E516: No buffers were deleted: sil! keepj bd 4 (<SNR>31_LocalBrowseRefresh (line 42))
+DBG 2023-10-20T20:28:12.923 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:28:12.923 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:28:12.974 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:28:13.295 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<C-z>"]]
+DBG 2023-10-20T20:28:13.295 nvim.24515.0 receive_msgpack:303: ch 1: parsing 20 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:28:13.295 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 state_enter:96: input: <C-Z>
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: flush (+9 times...)
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:28:13.296 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: suspend
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:28:13.296 ?.24514    receive_msgpack:303: ch 3: parsing 34 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:28:13.296 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:28:13.296 ?.24514    log_server_msg:71: RPC ->ch 3: DBG 2023-10-20T20:28:13.296 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+[notify]   [2, "nvim_ui_detach", []]
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 receive_msgpack:303: ch 1: parsing 18 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_detach
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_detach
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 handle_nvim_ui_detach:4397: RPC: ch 1: invoke nvim_ui_detach
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:28:13.297 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:28:13.348 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:28:13.348 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:28:13.348 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:28:13.399 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:02.599 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_ui_attach", [210, 80, {"rgb"=>true, "ext_linegrid"=>true, "ext_termcolors"=>true, "term_name"=>"xterm-256color", "term_background"=>"dark", "term_colors"=>256, "stdin_tty"=>true, "stdout_tty"=>true}]]
+DBG 2023-10-20T20:47:02.600 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 receive_msgpack:303: ch 1: parsing 141 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_attach
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_attach
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 handle_nvim_ui_attach:4256: RPC: ch 1: invoke nvim_ui_attach
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: flush (+1 times...)
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: option_set
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: option_set (+13 times...)
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: set_icon
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: set_title
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: default_colors_set
+DBG 2023-10-20T20:47:02.600 nvim.24515.0 UI: option_set
+DBG 2023-10-20T20:47:02.601 ?.24514    receive_msgpack:303: ch 3: parsing 3845 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:02.601 nvim.24515.0 UI: option_set (+4 times...)
+DBG 2023-10-20T20:47:02.601 nvim.24515.0 UI: default_colors_set
+DBG 2023-10-20T20:47:02.601 ?.24514    log_server_msg:71: RPC ->ch 3: DBG 2023-10-20T20:47:02.601 nvim.24515.0 UI: grid_resize
+[notify]   [2, "nvim_ui_set_option", ["rgb", false]]
+DBG 2023-10-20T20:47:02.601 nvim.24515.0 UI: grid_clear
+DBG 2023-10-20T20:47:02.601 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:47:02.602 nvim.24515.0 UI: raw_line (+81 times...)
+DBG 2023-10-20T20:47:02.602 nvim.24515.0 UI: win_viewport
+DBG 2023-10-20T20:47:02.602 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:02.603 ?.24514    receive_msgpack:303: ch 3: parsing 2214 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 receive_msgpack:303: ch 1: parsing 27 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_set_option
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_set_option
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 handle_nvim_ui_set_option:4463: RPC: ch 1: invoke nvim_ui_set_option
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 UI: mode_info_set
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:47:02.603 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:02.603 ?.24514    receive_msgpack:303: ch 3: parsing 1825 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:02.604 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:02.604 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:02.605 ?.24514    handle_background_color:674: bg response: dark
+DBG 2023-10-20T20:47:02.605 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_ui_set_option", ["term_background", "dark"]]
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 receive_msgpack:303: ch 1: parsing 43 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_ui_set_option
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 handle_request:413: RPC: scheduled nvim_ui_set_option
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 handle_nvim_ui_set_option:4463: RPC: ch 1: invoke nvim_ui_set_option
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:02.606 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:02.655 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:03.752 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Escape>"]]
+DBG 2023-10-20T20:47:03.753 nvim.24515.0 receive_msgpack:303: ch 1: parsing 23 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:03.753 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:47:03.753 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:47:03.753 nvim.24515.0 state_enter:96: input: <Esc>
+DBG 2023-10-20T20:47:03.753 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:03.754 ?.24514    receive_msgpack:303: ch 3: parsing 51 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:03.754 ?.24514    receive_msgpack:303: ch 3: parsing 54 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:03.754 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:03.805 nvim.24515.0 state_enter:96: input: K_EVENT
+DBG 2023-10-20T20:47:03.806 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:03.806 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:03.857 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:03.994 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", [":"]]
+DBG 2023-10-20T20:47:03.995 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:03.995 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:47:03.995 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:47:03.995 nvim.24515.0 state_enter:96: input: <:>
+DBG 2023-10-20T20:47:03.995 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: flush (+5 times...)
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:03.996 ?.24514    receive_msgpack:303: ch 3: parsing 48 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: raw_line (+1 times...)
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: mouse_off
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:03.996 ?.24514    receive_msgpack:303: ch 3: parsing 131 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:03.996 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:04.048 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:04.073 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["q"]]
+DBG 2023-10-20T20:47:04.073 nvim.24515.0 receive_msgpack:303: ch 1: parsing 16 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:04.073 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:47:04.073 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 state_enter:96: input: <q>
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 UI: flush (+2 times...)
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 UI: raw_line
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:04.074 ?.24514    receive_msgpack:303: ch 3: parsing 71 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=0 events_pending=0
+DBG 2023-10-20T20:47:04.074 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:04.126 nvim.24515.0 inbuf_poll:458: blocking... events_enabled=1 events_pending=0
+DBG 2023-10-20T20:47:04.212 ?.24514    log_server_msg:71: RPC ->ch 3: [notify]   [2, "nvim_input", ["<Enter>"]]
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 receive_msgpack:303: ch 1: parsing 22 bytes from msgpack Stream: 0x14f812e20
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 log_client_msg:101: RPC <-ch 1: [response] : nvim_input
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 handle_nvim_input:4900: RPC: ch 1: invoke nvim_input
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 state_enter:96: input: <CR>
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 UI: flush (+4 times...)
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 UI: grid_cursor_goto
+DBG 2023-10-20T20:47:04.213 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:04.213 ?.24514    receive_msgpack:303: ch 3: parsing 46 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:04.226 nvim.24515.0 UI: mode_change
+DBG 2023-10-20T20:47:04.226 nvim.24515.0 UI: mouse_on
+DBG 2023-10-20T20:47:04.226 nvim.24515.0 UI: flush
+DBG 2023-10-20T20:47:04.226 ?.24514    receive_msgpack:303: ch 3: parsing 59 bytes from msgpack Stream: 0x12281c020
+DBG 2023-10-20T20:47:04.226 nvim.24515.0 UI: stop
+DBG 2023-10-20T20:47:04.226 nvim.24515.0 stream_close:109: closing Stream: 0x14f812e20
+DBG 2023-10-20T20:47:04.226 nvim.24515.0 stream_close:109: closing Stream: 0x14f812fd0
+DBG 2023-10-20T20:47:04.226 ?.24514    read_cb:119: closing Stream (0x12281c020): EOF (end of file)
+DBG 2023-10-20T20:47:04.226 ?.24514    stream_close:109: closing Stream: 0x12281be70
+INF 2023-10-20T20:47:04.226 nvim.24515.0 os_exit:670: Nvim exit: 0
+DBG 2023-10-20T20:47:04.226 ?.24514    stream_close:109: closing Stream: 0x12281c020
+INF 2023-10-20T20:47:04.226 ?.24514    chan_close_with_error:653: RPC: ch 3 was closed by the client
+INF 2023-10-20T20:47:04.227 ?.24514    on_process_exit:443: exited: pid=24515 status=0 stoptime=0
+DBG 2023-10-20T20:47:04.228 ?.24514    stream_close:109: closing Stream: 0x1180401e0
+INF 2023-10-20T20:47:04.228 ?.24514    os_exit:670: Nvim exit: 0

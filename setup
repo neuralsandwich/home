@@ -6,9 +6,32 @@ export INSTALL_PREFIX="${HOME}/."
 TOOLS=$(find . -maxdepth 1 -mindepth 1 -type d -not -name ".*")
 
 main() {
-	echo "################################"
-	echo "# Dot installing"
-	echo "################################"
+	if [[ "$(uname)" == "Darwin" ]] ; then
+		
+		# Allow Intel compatiblity
+		/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+
+		if [[ ! -f "/opt/homebrew/bin/brew" ]] ; then
+			echo "#-------------------------------------------------------------------------------"
+			echo "# Bootstrapping Dot"
+			echo "#-------------------------------------------------------------------------------"
+			echo "# Installing Homebrew"
+			echo "#-------------------------------------------------------------------------------"
+
+        		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    			(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/xlvdk/.zprofile
+    			eval "$(/opt/homebrew/bin/brew shellenv)"
+		fi
+
+		echo "#-------------------------------------------------------------------------------"
+		echo "# Installing Brewfile"
+		echo "#-------------------------------------------------------------------------------"
+	    brew bundle --file=mac_apps/Brewfile
+	fi
+
+	echo "# Installing..."
+
+	brew bundle --file=mac_apps/Brewfile
 
 	pushd platform_tools >& /dev/null
 	./install
@@ -16,10 +39,15 @@ main() {
 
 	source platform_tools/setup_path
 
-	skips=(./platform_tools ./dot)
+	set -x
+
+	skips=(./platform_tools ./dot ./vim)
 	TOOLS="${TOOLS[@]/$skips}"
 	for tool in ${TOOLS[@]}
 	do
+		echo "#-------------------------------------------------------------------------------"
+		echo "# Installing ${tool}"
+		echo "#-------------------------------------------------------------------------------"
 		pushd "${tool}" >& /dev/null
 		./install
 		popd >& /dev/null

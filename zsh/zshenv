@@ -63,10 +63,12 @@ export GPGKEY="EE62340D"
 
 # GPG Agent
 export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+if [[ ! -n "$SSH_CLIENT" ]] ; then
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+
 if _has gpg-agent; then
-        eval "$(gpgconf --launch gpg-agent)"
-        echo UPDATESTARTUPTTY | gpg-connect-agent 1>/dev/null
+        gpgconf --launch gpg-agent
 fi
 
 # Debian package information
@@ -74,10 +76,12 @@ export DEBFULLNAME="Sean Jones"
 export DEBEMAIL="neuralsandwich@gmail.com"
 
 # Ccache Options
-export CCACHE_DIR="$HOME/dev/.ccache"
+export CCACHE_DIR="$HOME/.ccache"
 
 # Application Environment Variables
 export GOPATH=$HOME/go
 
 # Local Config
-source "$DOTFILES/local/zshenv"
+if [[ -f "$DOTFILES/local/zshenv" ]] ; then 
+	source "$DOTFILES/local/zshenv"
+fi

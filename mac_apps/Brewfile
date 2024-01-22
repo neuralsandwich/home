@@ -1,0 +1,17 @@
+brew "mas"
+brew "rg"
+brew "tree"
+
+# System Utilities
+mas "1Password", id: 1333542190
+mas "Magnet", id: 441258766
+
+# Regular Apps
+mas "Slack", id: 803453959
+mas "HomeCam", id: 1292995895
+mas "Garmin BaseCamp", id: 411052274
+
+cask "firefox"
+cask "filebot"
+cask "handbrake"
+cask "makemkv"

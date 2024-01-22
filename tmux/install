@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 link_dotfiles() {
 	local files=(tmux.conf)
 	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }

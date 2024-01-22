@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+main() {
+	brew install mas || true
+
+	# System Utilities
+	mas install 1333542190 # 1password
+	mas install 441258766  # Magnet
+
+	# Regular Apps
+	mas install 803453959  # Slack Desktop
+	mas install 1292995895 # HomeCam
+}
+
+main $@

@@ -39,3 +39,5 @@ alias gta='git tag -a -m'
 alias gf='git reflog'
 # Use an alias from .gitconfig
 alias gh='git hist'
+
+alias opsignin='eval $(op signin)'

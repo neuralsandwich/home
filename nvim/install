@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+
+link_dotfiles() {
+	local files=(nvim)
+	link -p "${INSTALL_PREFIX}" ${files[@]/#/-l }
+}
+
+install_dependencies() {
+	local deps=(rg)
+
+	for dep in ${deps[@]}
+	do
+		if pkgcheck "${dep}"; then
+			pkginstall "${dep}"
+		fi
+	done
+}
+
+get_packer() {
+	git submodule update --init --recursive -- vim
+}
+
+main() {
+    INSTALL_PREFIX="${HOME}/.config/"
+	link_dotfiles
+	get_packer
+}
+
+main $@

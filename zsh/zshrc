@@ -18,10 +18,16 @@ setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
+setopt appendhistory
+setopt SHARE_HISTORY
 
 ######################
 # Load ZSH functions #
 ######################
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
 
 # Load completions for Ruby, Git, etc.
 autoload compinit
@@ -69,6 +75,9 @@ source "$ZSH/zkeybindings"
 # alias
 source "$ZSH/zsh_aliases"
 
+# fzf
+source "$ZSH/func/fzf/fzf.zsh"
+
 ###############
 # Set Prompts #
 ###############
@@ -86,3 +95,5 @@ RPROMPT='${return_status}$(battery_time_remaining) $(battery_pct_prompt)\
 %{$reset_color%}'
 export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
 export PATH="/opt/homebrew/opt/cython/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
